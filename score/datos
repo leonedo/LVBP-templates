@@ -1,0 +1,48 @@
+conteo:  B-S
+innings: 1
+visitantecarreras 0
+homeclubcarreras 0
+out2 0-1 
+out1 0-1
+tercerabasellena 0-1
+segundabasellena
+primerabasellena
+partebajaInning 0-1
+partealtaInning 0-1
+nombreequipohomeclub 
+nombreequipovisitante
+scorevisitantetiburones 0-1
+scorevisitantemagallanes 0-1
+scorevisitanteleones
+scorevisitantecaribes
+scorevisitantecardenales
+scorevisitantebravos
+scorevisitanteaguilas
+scorevisitantetigres
+scorehomeclubtiburones
+scorehomeclubmagallanes
+scorehomeclubleones
+scorehomeclubcaribes
+scorehomeclubcardenales
+scorehomeclubbravos
+scorehomeclubaguilas
+scorehomeclubtigres
+logovisitantetigres
+logovisitantetiburones
+logovisitantemagallanes
+logovisitanteleones
+logovisitantecaribes
+logovisitantecardenales
+logovisitantebravos
+logovisitanteaguilas
+barraaltavisitante: nombre
+barraaltavisitantetigres
+barraaltavisitantetiburones
+barraaltavisitantemagallanes
+barraaltavisitanteleones
+barraaltavisitantecaribes
+barraaltavisitantecardenales
+barraaltavisitantebravos
+barraaltavisitanteaguilas
+barraaltahomeclubtigres
+barraaltahomeclubaguilas

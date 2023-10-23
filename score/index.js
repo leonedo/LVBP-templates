@@ -36,7 +36,8 @@ const loadAnimation = (data, container) => {
         renderer: 'svg',
         loop: false,
         autoplay: false,
-        path: data
+        path: data,
+        rendererSettings: {hideOnTransparent:false}
     });
 }
 
@@ -192,6 +193,20 @@ const animPromise = makeAnimPromise()
 webcg.on('data', function (data) {
     let updateTiming = 0
     console.log('data from casparcg received')
+    
+    var key; 
+    for (key in data) {
+        console.log(key + " = " + data[key]); 
+        //if (key.includes("equipo")){update_equipo(data[key])}
+        if (key.includes("logo") || key.includes("out") || key.includes("score") || key.includes("barra") || key.includes("basellena") || key.includes("parte")){update_opacidad(key,data[key])}
+         // opa_base_# opa_out_# opa_baja opa_alta
+        // vamos a usar opa para actualizar bases y outs! 
+    } 
+
+
+
+
+    console.log('End of my test segment')
     animPromise.then(resolve => {
             if (anim.currentFrame !== 0 && updateAnimation) {
                 updateTiming = framesMilliseconds * (updateDelay + loopTiming)
