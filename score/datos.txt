@@ -20,3 +20,7 @@ segundabasellena
 primerabasellena
 partebajaInning
 partealtaInning
+
+---- Actions ------
+show
+hide
