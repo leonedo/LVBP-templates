@@ -1,0 +1,76 @@
+Imports System.IO
+Imports System.Net
+Imports System.IO.Compression
+
+Module Module1
+    Sub Main()
+        Dim zipUrl As String = "https://github.com/leonedo/LVBP-templates/archive/refs/heads/main.zip"
+        Dim downloadPath As String = "C:\Path\To\Download\main.zip"
+        Dim extractPath As String = "C:\Path\To\Extract"
+
+        ' Download the zip file
+        DownloadFile(zipUrl, downloadPath)
+
+        ' Extract the contents
+        ExtractZip(downloadPath, extractPath)
+
+        Console.WriteLine("Download and extraction completed.")
+    End Sub
+
+    Sub DownloadFile(url As String, savePath As String)
+        Using client As New WebClient()
+            client.DownloadFile(url, savePath)
+        End Using
+    End Sub
+
+    Sub ExtractZip(zipPath As String, extractPath As String)
+        ZipFile.ExtractToDirectory(zipPath, extractPath)
+    End Sub
+End Module
+Make sure to replace "C:\Path\To\Download\main.zip" and "C:\Path\To\Extract" with your desired download and extraction paths.
+
+'Also, keep in mind that you should handle exceptions, check if the file already exists, and add more error checking depending on your use case.
+'Feel free to adapt this code to your needs!
+
+
+
+
+vb.net
+Copy code
+Imports Google.Cloud.Storage.V1
+Imports System.IO
+
+Module Module1
+    Sub Main()
+        Dim bucketName As String = "your-bucket-name"
+        Dim folderName As String = "your-folder-name"
+        Dim downloadPath As String = "C:\Path\To\Download"
+
+        ' Set the path to your service account key JSON file
+        Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "path\to\your\service-account-key.json")
+
+        ' Create a storage client
+        Dim storage = StorageClient.Create()
+
+        ' List objects in the specified folder
+        Dim objects = storage.ListObjects(bucketName, folderName)
+
+        ' Download each object
+        For Each obj In objects
+            Dim destinationPath = Path.Combine(downloadPath, obj.Name)
+            Console.WriteLine($"Downloading {obj.Name} to {destinationPath}")
+            storage.DownloadObject(bucketName, obj.Name, destinationPath)
+        Next
+
+        Console.WriteLine("Download completed.")
+    End Sub
+End Module
+
+'Make sure to replace "your-bucket-name", "your-folder-name", and "path\to\your\service-account-key.json" with your actual GCS bucket name, folder name, and the path to your service account key JSON file.
+'Also, ensure that your application has the necessary permissions to read from the GCS bucket.
+'This example assumes that you want to download all objects in a specific folder. Adjust the code as needed based on your requirements.
+
+
+
+
+
