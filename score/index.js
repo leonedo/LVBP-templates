@@ -209,10 +209,6 @@ webcg.on('data', function (data) {
         //if (key.includes("logo") || key.includes("out") || key.includes("score") || key.includes("barra") || key.includes("basellena") || key.includes("parte")){update_opacidad(key,data[key])}
         if (key === "visitante" || key === "homeclub"){update_equipos(data[key],key)}
     } 
-
-
-
-
     console.log('End of my test segment')
     animPromise.then(resolve => {
             if (anim.currentFrame !== 0 && updateAnimation) {
@@ -368,6 +364,26 @@ webcg.on('play', function () {
     });
 
 });
+
+webcg.on('show', function () {
+    anim.setDirection(1);
+    animPromise.then((resolve) => {
+        console.log('show')
+        anim.goToAndPlay('show', true);
+        isOn = true;
+    });
+
+});
+
+webcg.on('hide', function () {
+   console.log("this is hide!")
+    anim.setDirection(-1);
+    anim.playSegments([60, 0.1], true);
+    isOn = false;
+   
+
+});
+
 
 webcg.on('stop', function () {
     console.log('stop')
