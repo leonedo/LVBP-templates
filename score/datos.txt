@@ -1,18 +1,20 @@
-conteo:  B-S
-innings: 1
-visitantecarreras 0
-homeclubcarreras 0
-out2 0-1 
-out1 0-1
-tercerabasellena 0-1
+conteo: 
+innings: 
+visitantecarreras 
+homeclubcarreras 
+jugadorvisitante
+jugadorhomeclub
+out2
+out1
+tercerabasellena
 segundabasellena
 primerabasellena
-partebajaInning 0-1
-partealtaInning 0-1
+partebajaInning
+partealtaInning
 nombreequipohomeclub 
 nombreequipovisitante
-scorevisitantetiburones 0-1
-scorevisitantemagallanes 0-1
+scorevisitantetiburones
+scorevisitantemagallanes
 scorevisitanteleones
 scorevisitantecaribes
 scorevisitantecardenales
@@ -35,6 +37,14 @@ logovisitantecaribes
 logovisitantecardenales
 logovisitantebravos
 logovisitanteaguilas
+logohomeclubtigres
+logohomeclubtiburones
+logohomeclubmagallanes
+logohomeclubleones
+logohomeclubcaribes
+logohomeclubcardenales
+logohomeclubbravos
+logohomeclubaguilas
 barraaltavisitante: nombre
 barraaltavisitantetigres
 barraaltavisitantetiburones
@@ -45,4 +55,10 @@ barraaltavisitantecardenales
 barraaltavisitantebravos
 barraaltavisitanteaguilas
 barraaltahomeclubtigres
+barraaltahomeclubtiburones
+barraaltahomeclubmagallanes
+barraaltahomeclubleones
+barraaltahomeclubcaribes
+barraaltahomeclubcardenales
+barraaltahomeclubbravos
 barraaltahomeclubaguilas

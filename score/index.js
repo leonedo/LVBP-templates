@@ -25,6 +25,14 @@ let nextAnimation;
 let imagesReplace = {};
 
 
+//data de equipos
+
+var opacidad_equipos = {
+    "visitante": ["scorevisitante","logovisitante","barraaltavisitante"],
+    "homeclub": ["scorehomeclub","logohomeclub","barraaltahomeclub"] 
+}
+var equipos = ["tigres","aguilas","magallanes","leones","tiburones","cardenales","caribes","bravos"]
+
 let animContainer = document.getElementById('bm');
 let loopContainer = document.getElementById('loop');
 
@@ -198,9 +206,8 @@ webcg.on('data', function (data) {
     for (key in data) {
         console.log(key + " = " + data[key]); 
         //if (key.includes("equipo")){update_equipo(data[key])}
-        if (key.includes("logo") || key.includes("out") || key.includes("score") || key.includes("barra") || key.includes("basellena") || key.includes("parte")){update_opacidad(key,data[key])}
-         // opa_base_# opa_out_# opa_baja opa_alta
-        // vamos a usar opa para actualizar bases y outs! 
+        //if (key.includes("logo") || key.includes("out") || key.includes("score") || key.includes("barra") || key.includes("basellena") || key.includes("parte")){update_opacidad(key,data[key])}
+        if (key === "visitante" || key === "homeclub"){update_equipo(data[key],key)}
     } 
 
 
@@ -305,6 +312,7 @@ anim.addEventListener('complete', () => {
 })
 
 //Custom methods
+
 function update_color(campo,color){
     var fill_color = `.${campo}`
     document.querySelector(fill_color).style.setProperty("fill", color);
@@ -316,26 +324,36 @@ function update_opacidad(campo,value){
 }
 
 function clear_logos(){
-    const logos = ["logo_toros_2", data_equipos[equipo_visitante].logo2];
-    logos.forEach((item, index) => {
-      console.log(`${index} : ${item}`);
-      update_opacidad(item,0);
-    });
-}
-
-function update_equipo(nombre_equipo){
-    clear_logos()
-    update_color("c0",data_equipos[nombre_equipo].color);
-    update_color("c1",data_equipos[nombre_equipo].color);
-    update_opacidad(data_equipos[nombre_equipo].logo2, 1);
+    for (var equipoKey in opacidad_equipos) {
+        if (opacidad_equipos.hasOwnProperty(equipoKey)) {
+            // Iterate through equipos
+            for (var i = 0; i < equipos.length; i++) {
+                var equipo = equipos[i];
+                var campos = opacidad_equipos[equipoKey];
+                
+                // Generate combinations and call update_opacidad
+                for (var j = 0; j < campos.length; j++) {
+                    var campo = campos[j];
+                    var combination = campo + equipo;
+                    
+                    update_opacidad(combination,"0")
+                }
+            }
+        }
+    }
     
 }
 
-function update_visitante(visitante){
-    update_color("c2",data_equipos[visitante].color);
-    update_opacidad(data_equipos[visitante].logo, 1);
-    equipo_visitante = visitante;
+function update_equipos(nombre_equipo,homevisit){
+    // homevisit puede ser "visitante" o "homeclub"
+    var campos = opacidad_equipos[homevisit]
+    for (var j = 0; j < campos.length; j++) {
+        var campo = campos[j];
+        var combination = campo + nombre_equipo;
+        update_opacidad(combination,1);
+    }  
 }
+
 
 
 //casparcg control
