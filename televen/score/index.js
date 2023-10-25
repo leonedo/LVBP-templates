@@ -206,7 +206,7 @@ webcg.on('data', function (data) {
     for (key in data) {
         console.log(key + " = " + data[key]); 
         //if (key.includes("equipo")){update_equipo(data[key])}
-        //if (key.includes("logo") || key.includes("out") || key.includes("score") || key.includes("barra") || key.includes("basellena") || key.includes("parte")){update_opacidad(key,data[key])}
+        if ( key.includes("out") || key.includes("basellena") || key.includes("parte")){update_opacidad(key,data[key])}
         if (key === "visitante" || key === "homeclub"){update_equipos(data[key],key)}
     } 
     console.log('End of my test segment')
