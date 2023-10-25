@@ -13646,8 +13646,8 @@
       "ddd": 0,
       "ind": 3,
       "ty": 5,
-      "nm": ".visitantecarreras",
-      "cl": "visitantecarreras",
+      "nm": ".homeclubcarreras",
+      "cl": "homeclubcarreras",
       "sr": 1,
       "ks": {
         "o": {
@@ -13767,8 +13767,8 @@
       "ddd": 0,
       "ind": 4,
       "ty": 5,
-      "nm": ".homeclubcarreras",
-      "cl": "homeclubcarreras",
+      "nm": ".visitantecarreras",
+      "cl": "visitantecarreras",
       "sr": 1,
       "ks": {
         "o": {
@@ -13888,8 +13888,8 @@
       "ddd": 0,
       "ind": 5,
       "ty": 4,
-      "nm": ".out2",
-      "cl": "out2",
+      "nm": ".out_dos",
+      "cl": "out_dos",
       "sr": 1,
       "ks": {
         "o": {
@@ -14020,8 +14020,8 @@
       "ddd": 0,
       "ind": 6,
       "ty": 4,
-      "nm": ".out1",
-      "cl": "out1",
+      "nm": ".out_uno",
+      "cl": "out_uno",
       "sr": 1,
       "ks": {
         "o": {
