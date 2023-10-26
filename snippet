@@ -72,5 +72,26 @@ End Module
 
 
 
+Module StringExtensions
+    <System.Runtime.CompilerServices.Extension()>
+    Public Function FormatSpecialNumber(ByVal input As String) As String
+        Dim result As String
 
+        ' Convert the input string to a decimal
+        Dim value As Decimal
+        If Decimal.TryParse(input, value) Then
+            ' Check if the value is less than 1 and format accordingly
+            If value < 1 AndAlso input.StartsWith("0.") Then
+                result = value.ToString(".###") ' Use appropriate format based on your needs
+            Else
+                result = value.ToString("0.000") ' Use appropriate format based on your needs
+            End If
+        Else
+            ' Handle invalid input
+            result = "Invalid input"
+        End If
+
+        Return result
+    End Function
+End Module
 
