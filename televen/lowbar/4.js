@@ -48,7 +48,7 @@ const loadAnimation = (data, container) => {
     });
 }
 
-let anim = loadAnimation('data.json', animContainer)
+let anim = loadAnimation('4.json', animContainer)
 let externalLoop;
 
 //add font-face from data.json  
@@ -354,7 +354,9 @@ function update_equipos(nombre_equipo,homevisit){
 webcg.on('play', function () {
     animPromise.then((resolve) => {
         console.log('play')
-        anim.playSegments([markers.start.time, markers.start.time + markers.start.duration], true);
+       // anim.playSegments([markers.start.time, markers.start.time + markers.start.duration], true);
+        anim.playSegments([0, 60], true);
+
         //anim.goToAndPlay('play', true);
         if (loopExits && loopExternal) {
             externalLoop.goToAndPlay('play', true);

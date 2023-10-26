@@ -44,12 +44,12 @@ const loadAnimation = (data, container) => {
         renderer: 'svg',
         loop: false,
         autoplay: false,
-        path: data,
-       // rendererSettings: {hideOnTransparent:false}
+        path: data
+       
     });
 }
 
-let anim = loadAnimation('lz_data.json', animContainer)
+let anim = loadAnimation('1.json', animContainer)
 let externalLoop;
 
 //add font-face from data.json  
@@ -206,8 +206,8 @@ webcg.on('data', function (data) {
     for (key in data) {
         console.log(key + " = " + data[key]); 
         //if (key.includes("equipo")){update_equipo(data[key])}
-        if ( key.includes("out") || key.includes("basellena") || key.includes("parte")){update_opacidad(key,data[key])}
-        if (key === "visitante" || key === "homeclub"){update_equipos(data[key],key)}
+      //  if ( key.includes("out") || key.includes("basellena") || key.includes("parte")){update_opacidad(key,data[key])}
+       // if (key === "visitante" || key === "homeclub"){update_equipos(data[key],key)}
     } 
     console.log('End of my test segment')
     animPromise.then(resolve => {
