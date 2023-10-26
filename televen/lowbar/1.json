@@ -9303,7 +9303,7 @@
     "list": [
       {
         "origin": 0,
-        "fPath": "AvantGarde LT Book Regular.ttf",
+        "fPath": "font/AvantGarde LT Book Regular.ttf",
         "fClass": "",
         "fFamily": "AvantGardeLT-Book",
         "fWeight": "",
@@ -9313,7 +9313,7 @@
       },
       {
         "origin": 0,
-        "fPath": "ITC Avant Garde Gothic LT Demi.ttf",
+        "fPath": "font/ITC Avant Garde Gothic LT Demi.ttf",
         "fClass": "",
         "fFamily": "AvantGardeLT-Demi",
         "fWeight": "",
