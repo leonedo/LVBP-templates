@@ -9618,7 +9618,8 @@
       "ddd": 0,
       "ind": 6,
       "ty": 0,
-      "nm": "logobravosbateador",
+      "nm": ".logobravosbateador",
+      "cl": "logobravosbateador",
       "refId": "comp_10",
       "sr": 1,
       "ks": {
@@ -13372,16 +13373,12 @@
     {
       "tm": 0,
       "cm": "start",
-      "dr": 60
-    }, {
-      "tm": 60,
-      "cm": "update",
-      "dr": 10
+      "dr": 60.0000024438501
     },
     {
-      "tm": 90,
+      "tm": 90.0000036657751,
       "cm": "stop",
-      "dr": 20
+      "dr": 30.0000012219251
     }
   ]
 }

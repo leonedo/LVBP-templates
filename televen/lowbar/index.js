@@ -27,11 +27,18 @@ let imagesReplace = {};
 
 //data de equipos
 
-var opacidad_equipos = {
-    "visitante": ["scorevisitante","logovisitante","barraaltavisitante"],
-    "homeclub": ["scorehomeclub","logohomeclub","barraaltahomeclub"] 
+
+
+var equipos = {
+    "tigres" : ["logotigresbateador", "logofondotigres"],
+    "aguilas":["logoaguilasbateador", "logoaguilasfondo"],
+    "magallanes":["logomagallanesbateador", "logomagallanesfondo"],
+    "leones":["logoleonesbateador", "logofondoleones"],
+    "tiburones":["logotiburonesbateador", "logofondotiburones"],
+    "cardenales":["logocardenalesbateador", "logofondocardenales"],
+    "caribes":["logocaribesbateador", "logofondocaribes"],
+    "bravos":["logobravosbateador", "logobravosfondo"]
 }
-var equipos = ["tigres","aguilas","magallanes","leones","tiburones","cardenales","caribes","bravos"]
 
 let animContainer = document.getElementById('bm');
 let loopContainer = document.getElementById('loop');
@@ -48,7 +55,7 @@ const loadAnimation = (data, container) => {
     });
 }
 
-let anim = loadAnimation('4.json', animContainer)
+let anim = loadAnimation('data.json', animContainer)
 let externalLoop;
 
 //add font-face from data.json  
@@ -203,7 +210,7 @@ webcg.on('data', function (data) {
     var key; 
     for (key in data) {
         console.log(key + " = " + data[key]); 
-        //if (key.includes("equipo")){update_equipo(data[key])}
+        if (key.includes("equipo")){clear_logos(data[key])}
         //if ( key.includes("out") || key.includes("basellena") || key.includes("parte")){update_opacidad(key,data[key])}
         //if (key === "visitante" || key === "homeclub"){update_equipos(data[key],key)}
     } 
@@ -313,29 +320,19 @@ function update_color(campo,color){
 }
 
 function update_opacidad(campo,value){
+    console.log(campo)
     var fill = `.${campo}`
     document.querySelector(fill).style.setProperty("opacity", value);
 }
 
-function clear_logos(){
-    for (var equipoKey in opacidad_equipos) {
-        if (opacidad_equipos.hasOwnProperty(equipoKey)) {
-            // Iterate through equipos
-            for (var i = 0; i < equipos.length; i++) {
-                var equipo = equipos[i];
-                var campos = opacidad_equipos[equipoKey];
-                
-                // Generate combinations and call update_opacidad
-                for (var j = 0; j < campos.length; j++) {
-                    var campo = campos[j];
-                    var combination = campo + equipo;
-                    
-                    update_opacidad(combination,"0")
-                }
-            }
+function clear_logos(teamNameToSkip){
+    for (var team in equipos) {
+        if (team !== teamNameToSkip) {
+            equipos[team].forEach(function(item) { 
+                    update_opacidad(item, 0);
+            });
         }
     }
-    
 }
 
 function update_equipos(nombre_equipo,homevisit){
