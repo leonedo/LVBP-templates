@@ -27,7 +27,7 @@ let imagesReplace = {};
 
 //data de equipos
 
-var equipo
+
 
 var equipos = {
     "tigres" : ["logotigresbateador", "logofondotigres"],
@@ -80,6 +80,7 @@ const makeAnimPromise = () => {
             anim.addEventListener('DOMLoaded', function (e) {
                 animLoaded = true;
                 resolve('Animation ready to play')
+                
             });
         }
     })
@@ -321,17 +322,17 @@ function update_color(campo,color){
 }
 
 function update_opacidad(campo,value){
-    console.log(campo)
     var fill = `.${campo}`
     document.querySelector(fill).style.setProperty("opacity", value);
 }
 
 
 function checkandupdate(item){
-console.log(`checkandupdate: ${item}`)
     if (itemExists(item)){
+        console.log(`checkandupdate: ${item} -- exist`)
         update_opacidad(item,0)
     } else {
+        console.log(`checkandupdate: ${item} --- waiting`)
         setTimeout(function(){
             checkandupdate(item);
         }, 100);
@@ -339,8 +340,9 @@ console.log(`checkandupdate: ${item}`)
 }
 
 function itemExists(item) {
+    var fill = `.${item}`
    //return document.querySelector(item).style !== false;
-   return document.querySelector(item) !== false;
+   return document.querySelector(fill) !== null;
 }
 
 
@@ -348,7 +350,7 @@ function clear_logos(teamNameToSkip){
     for (var team in equipos) {
         if (team !== teamNameToSkip) {
             equipos[team].forEach(function(item) { 
-                checkandupdate(item, 0);
+                checkandupdate(item);
             });
         }
     }
