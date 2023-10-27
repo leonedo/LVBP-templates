@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--  template made by heine froholdt heine.froholdt@gmail.com  -->
+    <meta charset="UTF-8" />
+    <title>Lower Third Bodymovin</title>
+
+    <style>
+
+        #bm {
+            position: fixed;                 
+                
+        }
+
+        #loop {
+            position: fixed;  
+          
+        }
+
+        body {
+            overflow: hidden;
+            margin: 0;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bm"></div>
+    <div id="loop"></div>
+
+   
+
+    <!-- Scripts -->
+
+    <script src="../webcg-framework.umd.js"></script>
+    <script src="../lottie.js"></script>
+ 
+    <script>
+        // Obtener la URL actual
+        var urlParams = new URLSearchParams(window.location.search);
+
+        // Obtener el valor del parámetro "parametro"
+        var miValor = urlParams.get('lanzador');
+        
+        // Hacer algo con el valor obtenido
+        console.log("El valor del parámetro 'parametro' es: " + miValor);
+
+        if (miValor === 'derecho') {
+            var script = document.createElement('script');
+            script.src = 'derecho.js';
+            document.head.appendChild(script);
+        } else if (miValor === 'zurdo') {
+            var script = document.createElement('script');
+            script.src = 'zurdo.js';
+            document.head.appendChild(script);
+        } else {
+            console.error('Valor no válido para el parámetro "lanzador"');
+        }
+    </script>
+</body>
+
+</html>
