@@ -11760,7 +11760,8 @@
       "ddd": 0,
       "ind": 21,
       "ty": 5,
-      "nm": ",informacionbarraalta",
+      "nm": ".informacionbarraalta",
+      "cl": "informacionbarraalta",
       "sr": 1,
       "ks": {
         "o": {

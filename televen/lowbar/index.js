@@ -27,7 +27,7 @@ let imagesReplace = {};
 
 //data de equipos
 
-
+var equipo
 
 var equipos = {
     "tigres" : ["logotigresbateador", "logofondotigres"],
@@ -210,6 +210,7 @@ webcg.on('data', function (data) {
     var key; 
     for (key in data) {
         console.log(key + " = " + data[key]); 
+       // if (key.includes("equipo")){equipo = data[key]}
         if (key.includes("equipo")){clear_logos(data[key])}
         //if ( key.includes("out") || key.includes("basellena") || key.includes("parte")){update_opacidad(key,data[key])}
         //if (key === "visitante" || key === "homeclub"){update_equipos(data[key],key)}
@@ -325,11 +326,29 @@ function update_opacidad(campo,value){
     document.querySelector(fill).style.setProperty("opacity", value);
 }
 
+
+function checkandupdate(item){
+console.log(`checkandupdate: ${item}`)
+    if (itemExists(item)){
+        update_opacidad(item,0)
+    } else {
+        setTimeout(function(){
+            checkandupdate(item);
+        }, 100);
+    }
+}
+
+function itemExists(item) {
+   //return document.querySelector(item).style !== false;
+   return document.querySelector(item) !== false;
+}
+
+
 function clear_logos(teamNameToSkip){
     for (var team in equipos) {
         if (team !== teamNameToSkip) {
             equipos[team].forEach(function(item) { 
-                    update_opacidad(item, 0);
+                checkandupdate(item, 0);
             });
         }
     }
