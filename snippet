@@ -95,3 +95,39 @@ Module StringExtensions
     End Function
 End Module
 
+
+Imports System.Net.Http
+Imports Newtonsoft.Json.Linq
+
+Module Module1
+    Sub Main()
+        Dim owner As String = "LEon"
+        Dim repo As String = "LVBP"
+
+        Dim latestRelease As String = GetLatestRelease(owner, repo)
+
+        Console.WriteLine($"Latest release version: {latestRelease}")
+        Console.ReadLine()
+    End Sub
+
+    Function GetLatestRelease(owner As String, repo As String) As String
+        Using client As New HttpClient()
+            client.DefaultRequestHeaders.Add("User-Agent", "YourAppName")
+
+            Dim apiUrl As String = $"https://api.github.com/repos/{owner}/{repo}/releases/latest"
+
+            Try
+                Dim response As String = client.GetStringAsync(apiUrl).Result
+
+                Dim json As JObject = JObject.Parse(response)
+                Dim tagName As String = json("tag_name").ToString()
+
+                Return tagName
+            Catch ex As Exception
+                Console.WriteLine($"Error: {ex.Message}")
+                Return "Error retrieving release"
+            End Try
+        End Using
+    End Function
+End Module
+
