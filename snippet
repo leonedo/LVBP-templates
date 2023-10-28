@@ -175,3 +175,51 @@ Module Module1
         End Using
     End Function
 End Module
+
+
+
+Imports System.Net.Http
+
+Module Module1
+    Sub Main()
+        Dim fileUrl As String = "http://example.com/yourfile.zip"
+        Dim savePath As String = "C:\YourDownloadPath\yourfile.zip"
+
+        DownloadFile(fileUrl, savePath)
+
+        Console.ReadLine()
+    End Sub
+
+    Async Sub DownloadFile(fileUrl As String, savePath As String)
+        Using client As New HttpClient()
+            Try
+                Dim response As HttpResponseMessage = Await client.GetAsync(fileUrl)
+
+                ' Check if the request was successful
+                If response.IsSuccessStatusCode Then
+                    ' Save the content to a file
+                    Dim content As HttpContent = response.Content
+                    Await content.ReadAsFileAsync(savePath, True)
+                    Console.WriteLine($"File downloaded to: {savePath}")
+                Else
+                    Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}")
+                End If
+            Catch ex As Exception
+                Console.WriteLine($"Error: {ex.Message}")
+            End Try
+        End Using
+    End Sub
+End Module
+
+Module HttpContentExtensions
+    <System.Runtime.CompilerServices.Extension>
+    Async Function ReadAsFileAsync(content As HttpContent, filename As String, overwrite As Boolean) As Task
+        Dim fileMode As FileMode = If(overwrite, FileMode.Create, FileMode.CreateNew)
+
+        Using fileStream As FileStream = New FileStream(filename, fileMode, FileAccess.Write, FileShare.None)
+            Await content.CopyToAsync(fileStream).ConfigureAwait(False)
+            fileStream.Close()
+        End Using
+    End Function
+End Module
+
