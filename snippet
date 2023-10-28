@@ -131,3 +131,47 @@ Module Module1
     End Function
 End Module
 
+
+
+Module Module1
+    Sub Main()
+        Dim owner As String = "LEon"
+        Dim repo As String = "LVBP"
+
+        Dim downloadUrl As String = GetLatestReleaseDownloadUrl(owner, repo)
+
+        If Not String.IsNullOrEmpty(downloadUrl) Then
+            Console.WriteLine($"Latest release download URL: {downloadUrl}")
+        Else
+            Console.WriteLine("Error retrieving download URL.")
+        End If
+
+        Console.ReadLine()
+    End Sub
+
+    Function GetLatestReleaseDownloadUrl(owner As String, repo As String) As String
+        Using client As New HttpClient()
+            client.DefaultRequestHeaders.Add("User-Agent", "YourAppName")
+
+            Dim apiUrl As String = $"https://api.github.com/repos/{owner}/{repo}/releases/latest"
+
+            Try
+                Dim response As String = client.GetStringAsync(apiUrl).Result
+
+                Dim json As JObject = JObject.Parse(response)
+                Dim assets As JArray = json("assets")
+
+                If assets.Count > 0 Then
+                    ' Assuming you want the first asset in the list
+                    Dim downloadUrl As String = assets(0)("browser_download_url").ToString()
+                    Return downloadUrl
+                Else
+                    Return "No assets found for the latest release."
+                End If
+            Catch ex As Exception
+                Console.WriteLine($"Error: {ex.Message}")
+                Return "Error retrieving download URL."
+            End Try
+        End Using
+    End Function
+End Module
