@@ -223,3 +223,31 @@ Module HttpContentExtensions
     End Function
 End Module
 
+
+
+Imports System.IO
+
+Module Module1
+    Sub rename()
+        Dim mainFolderPath As String = "C:\Path\To\Your\Main\Folder"
+        Dim searchTerm As String = "LVBP"
+        Dim newSubFolderName As String = "my subfolder"
+
+        ' Get all subfolders inside the main folder
+        Dim subfolders As String() = Directory.GetDirectories(mainFolderPath)
+
+        ' Loop through each subfolder and check for the search term in the name
+        For Each subfolder As String In subfolders
+            If subfolder.Contains(searchTerm) Then
+                ' Rename the subfolder
+                Dim newSubFolderPath As String = Path.Combine(mainFolderPath, newSubFolderName)
+                Directory.Move(subfolder, newSubFolderPath)
+                Console.WriteLine("Folder renamed successfully.")
+                Exit For ' Exit the loop once a match is found
+            End If
+        Next
+
+        Console.ReadLine() ' Keep console window open
+    End Sub
+End Module
+
