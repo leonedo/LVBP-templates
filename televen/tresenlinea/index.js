@@ -327,10 +327,10 @@ function update_opacidad(campo,value){
 }
 
 
-function checkandupdate(item){
+function checkandupdate(item,value){
     if (itemExists(item)){
         console.log(`checkandupdate: ${item} -- exist`)
-        update_opacidad(item,0)
+        update_opacidad(item,value)
     } else {
         console.log(`checkandupdate: ${item} --- waiting`)
         setTimeout(function(){
@@ -350,7 +350,11 @@ function clear_logos(teamNameToSkip){
     for (var team in equipos) {
         if (team !== teamNameToSkip) {
             equipos[team].forEach(function(item) { 
-                checkandupdate(item);
+                checkandupdate(item,0);
+            });
+        }else{
+            equipos[team].forEach(function(item) { 
+                checkandupdate(item,1);
             });
         }
     }
