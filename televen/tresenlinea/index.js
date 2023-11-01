@@ -334,7 +334,7 @@ function checkandupdate(item,value){
     } else {
         console.log(`checkandupdate: ${item} --- waiting`)
         setTimeout(function(){
-            checkandupdate(item);
+            checkandupdate(item,value);
         }, 100);
     }
 }
