@@ -6896,8 +6896,8 @@
       "ddd": 0,
       "ind": 32,
       "ty": 5,
-      "nm": ".1b",
-      "cl": "1b",
+      "nm": ".pos1",
+      "cl": "pos1",
       "sr": 1,
       "ks": {
         "o": {
@@ -6988,8 +6988,8 @@
       "ddd": 0,
       "ind": 33,
       "ty": 5,
-      "nm": ".2b",
-      "cl": "2b",
+      "nm": ".pos2",
+      "cl": "pos2",
       "sr": 1,
       "ks": {
         "o": {
@@ -7080,8 +7080,8 @@
       "ddd": 0,
       "ind": 34,
       "ty": 5,
-      "nm": ".3b",
-      "cl": "3b",
+      "nm": ".pos3",
+      "cl": "pos3",
       "sr": 1,
       "ks": {
         "o": {
@@ -7172,8 +7172,8 @@
       "ddd": 0,
       "ind": 35,
       "ty": 5,
-      "nm": ".ss",
-      "cl": "ss",
+      "nm": ".pos4",
+      "cl": "pos4",
       "sr": 1,
       "ks": {
         "o": {
@@ -7264,8 +7264,8 @@
       "ddd": 0,
       "ind": 36,
       "ty": 5,
-      "nm": ".c",
-      "cl": "c",
+      "nm": ".pos5",
+      "cl": "pos5",
       "sr": 1,
       "ks": {
         "o": {
@@ -7281,7 +7281,7 @@
         "p": {
           "a": 0,
           "k": [
-            752,
+            738,
             635.656,
             0
           ],
@@ -7356,8 +7356,8 @@
       "ddd": 0,
       "ind": 37,
       "ty": 5,
-      "nm": ".lf",
-      "cl": "lf",
+      "nm": ".pos6",
+      "cl": "pos6",
       "sr": 1,
       "ks": {
         "o": {
@@ -7448,8 +7448,8 @@
       "ddd": 0,
       "ind": 38,
       "ty": 5,
-      "nm": ".bd",
-      "cl": "bd",
+      "nm": ".pos7",
+      "cl": "pos7",
       "sr": 1,
       "ks": {
         "o": {
@@ -7540,8 +7540,8 @@
       "ddd": 0,
       "ind": 39,
       "ty": 5,
-      "nm": ".cf",
-      "cl": "cf",
+      "nm": ".pos8",
+      "cl": "pos8",
       "sr": 1,
       "ks": {
         "o": {
@@ -7632,8 +7632,8 @@
       "ddd": 0,
       "ind": 40,
       "ty": 5,
-      "nm": ".rf",
-      "cl": "rf",
+      "nm": ".pos9",
+      "cl": "pos9",
       "sr": 1,
       "ks": {
         "o": {
@@ -7775,7 +7775,7 @@
           "k": [
             {
               "s": {
-                "s": 36,
+                "s": 30,
                 "f": "PermanentMarker-Regular",
                 "t": "BATEADOR 9 áéíóú",
                 "ca": 0,
@@ -7867,7 +7867,7 @@
           "k": [
             {
               "s": {
-                "s": 36,
+                "s": 30,
                 "f": "PermanentMarker-Regular",
                 "t": "BATEADOR 8 áéíóú",
                 "ca": 0,
@@ -7959,7 +7959,7 @@
           "k": [
             {
               "s": {
-                "s": 36,
+                "s": 30,
                 "f": "PermanentMarker-Regular",
                 "t": "BATEADOR 7 áéíóú",
                 "ca": 0,
@@ -8051,7 +8051,7 @@
           "k": [
             {
               "s": {
-                "s": 36,
+                "s": 30,
                 "f": "PermanentMarker-Regular",
                 "t": "BATEADOR 6 áéíóú",
                 "ca": 0,
@@ -8143,7 +8143,7 @@
           "k": [
             {
               "s": {
-                "s": 36,
+                "s": 30,
                 "f": "PermanentMarker-Regular",
                 "t": "BATEADOR 5 áéíóú",
                 "ca": 0,
@@ -8235,7 +8235,7 @@
           "k": [
             {
               "s": {
-                "s": 36,
+                "s": 30,
                 "f": "PermanentMarker-Regular",
                 "t": "BATEADOR 4 áéíóú",
                 "ca": 0,
@@ -8327,7 +8327,7 @@
           "k": [
             {
               "s": {
-                "s": 36,
+                "s": 30,
                 "f": "PermanentMarker-Regular",
                 "t": "BATEADOR 3 áéíóú",
                 "ca": 0,
@@ -8419,7 +8419,7 @@
           "k": [
             {
               "s": {
-                "s": 36,
+                "s": 30,
                 "f": "PermanentMarker-Regular",
                 "t": "BATEADOR 2 áéíóú",
                 "ca": 0,
@@ -8511,7 +8511,7 @@
           "k": [
             {
               "s": {
-                "s": 36,
+                "s": 30,
                 "f": "PermanentMarker-Regular",
                 "t": "BATEADOR 1 áéíóú",
                 "ca": 0,

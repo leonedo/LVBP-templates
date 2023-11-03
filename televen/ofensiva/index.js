@@ -213,7 +213,7 @@ webcg.on('data', function (data) {
     for (key in data) {
         console.log(key + " = " + data[key]); 
        // if (key.includes("equipo")){equipo = data[key]}
-        if (key.includes("equipo")){clear_logos(data[key])}
+        if (key === "equipo"){clear_logos(data[key])}
         //if ( key.includes("out") || key.includes("basellena") || key.includes("parte")){update_opacidad(key,data[key])}
         //if (key === "visitante" || key === "homeclub"){update_equipos(data[key],key)}
     } 
@@ -348,6 +348,7 @@ function itemExists(item) {
 
 
 function clear_logos(teamNameToSkip){
+   console.log(`Clear logos: ${teamNameToSkip}`) 
     for (var team in equipos) {
         if (team !== teamNameToSkip) {
             equipos[team].forEach(function(item) { 
