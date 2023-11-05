@@ -818,8 +818,8 @@
       "ddd": 0,
       "ind": 7,
       "ty": 5,
-      "nm": ".hitsvis",
-      "cl": "hitsvis",
+      "nm": ".carrerashc",
+      "cl": "carrerashc",
       "sr": 1,
       "ks": {
         "o": {
@@ -1181,8 +1181,8 @@
       "ddd": 0,
       "ind": 10,
       "ty": 5,
-      "nm": ".carrerashc",
-      "cl": "carrerashc",
+      "nm": ".hitsvis",
+      "cl": "hitsvis",
       "sr": 1,
       "ks": {
         "o": {
