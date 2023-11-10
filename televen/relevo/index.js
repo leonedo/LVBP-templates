@@ -30,14 +30,14 @@ let imagesReplace = {};
 
 
 var equipos = {
-    "tigres" : ["logotigresrelevo"],
-    "aguilas":["logoaguilasrelevo"],
-    "magallanes":["logomagallanesrelevo"],
-    "leones":["logoleonesrelevo"],
-    "tiburones":["logotiburonesrelevo"],
-    "cardenales":["logocardenalesrelevo"],
-    "caribes":["logocaribesrelevo"],
-    "bravos":["logobravosrelevo"]
+    "tigres" : ["logotigresrelevo","fondotigres"],
+    "aguilas":["logoaguilasrelevo","fondoaguilas"],
+    "magallanes":["logomagallanesrelevo","fondomagallanes"],
+    "leones":["logoleonesrelevo","fondoleones"],
+    "tiburones":["logotiburonesrelevo","fondotiburones"],
+    "cardenales":["logocardenalesrelevo","fondocardenales"],
+    "caribes":["logocaribesrelevo","fondocaribes"],
+    "bravos":["logobravosrelevo","fondobravos"]
 }
 
 let animContainer = document.getElementById('bm');
