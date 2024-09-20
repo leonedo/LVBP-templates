@@ -17762,8 +17762,8 @@
       "ddd": 0,
       "ind": 27,
       "ty": 5,
-      "nm": ".partetexto",
-      "cl": "partetexto",
+      "nm": ".parteinningtexto",
+      "cl": "parteinningtexto",
       "sr": 1,
       "ks": {
         "o": {
@@ -18041,8 +18041,8 @@
       "ddd": 0,
       "ind": 30,
       "ty": 5,
-      "nm": ".datobarravisitante",
-      "cl": "datobarravisitante",
+      "nm": ".datojugadorvisitante",
+      "cl": "datojugadorvisitante",
       "parent": 33,
       "sr": 1,
       "ks": {
@@ -18229,8 +18229,8 @@
       "ddd": 0,
       "ind": 32,
       "ty": 5,
-      "nm": ".nombrebarravisitante",
-      "cl": "nombrebarravisitante",
+      "nm": ".jugadorvisitante",
+      "cl": "jugadorvisitante",
       "parent": 33,
       "sr": 1,
       "ks": {
@@ -18604,8 +18604,8 @@
       "ddd": 0,
       "ind": 34,
       "ty": 5,
-      "nm": ".datobarralocal",
-      "cl": "datobarralocal",
+      "nm": ".datojugadorhomeclub",
+      "cl": "datojugadorhomeclub",
       "parent": 37,
       "sr": 1,
       "ks": {
@@ -18792,8 +18792,8 @@
       "ddd": 0,
       "ind": 36,
       "ty": 5,
-      "nm": ".nombrebarralocal",
-      "cl": "nombrebarralocal",
+      "nm": ".jugadorhomeclub",
+      "cl": "jugadorhomeclub",
       "parent": 37,
       "sr": 1,
       "ks": {
