@@ -365,7 +365,7 @@ webcg.on('show', function () {
     anim.setDirection(1);
     animPromise.then((resolve) => {
         console.log('show')
-        anim.setSpeed(1.5)
+        anim.setSpeed(1)
         anim.goToAndPlay('show', true);
         isOn = true;
     });
@@ -375,8 +375,9 @@ webcg.on('show', function () {
 webcg.on('hide', function () {
    console.log("this is hide!")
     anim.setDirection(-1);
-    anim.setSpeed(4)
-    anim.playSegments([180, 0], true);
+    anim.setSpeed(3)
+    anim.playSegments([180, 55], true);
+    anim.playSegments([0, 0.001], false);
     isOn = false;
    
 
