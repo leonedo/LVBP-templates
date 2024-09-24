@@ -18041,14 +18041,14 @@
       "ddd": 0,
       "ind": 30,
       "ty": 5,
-      "nm": ".datojugadorvisitante",
-      "cl": "datojugadorvisitante",
+      "nm": ".datojugadorvisitante_OLD",
+      "cl": "datojugadorvisitante_OLD",
       "parent": 33,
       "sr": 1,
       "ks": {
         "o": {
           "a": 0,
-          "k": 100,
+          "k": 0,
           "ix": 11
         },
         "r": {
@@ -18095,7 +18095,7 @@
               "s": {
                 "s": 20,
                 "f": "UniformPro-Med",
-                "t": ".300",
+                "t": "",
                 "ca": 0,
                 "j": 2,
                 "tr": 0,
@@ -18135,14 +18135,14 @@
       "ddd": 0,
       "ind": 31,
       "ty": 5,
-      "nm": ".PICHEOSVISITA",
-      "cl": "PICHEOSVISITA",
+      "nm": ".PICHEOSVISITA_OLD",
+      "cl": "PICHEOSVISITA_OLD",
       "parent": 33,
       "sr": 1,
       "ks": {
         "o": {
           "a": 0,
-          "k": 100,
+          "k": 0,
           "ix": 11
         },
         "r": {
@@ -18229,14 +18229,15 @@
       "ddd": 0,
       "ind": 32,
       "ty": 5,
-      "nm": ".jugadorvisitante",
-      "cl": "jugadorvisitante",
+      "hd": true,
+      "nm": ".jugadorvisitante_OLD",
+      "cl": "jugadorvisitante_OLD",
       "parent": 33,
       "sr": 1,
       "ks": {
         "o": {
           "a": 0,
-          "k": 100,
+          "k": 0,
           "ix": 11
         },
         "r": {
@@ -18283,7 +18284,7 @@
               "s": {
                 "s": 20,
                 "f": "UniformPro-Med",
-                "t": "PEDRO PEREZ",
+                "t": "",
                 "ca": 0,
                 "j": 0,
                 "tr": 0,
@@ -18313,9 +18314,9 @@
         },
         "a": []
       },
-      "ip": 168.00000684278,
+      "ip": 299.00000684278,
       "op": 300.00001221925,
-      "st": 0,
+      "st": 299,
       "ct": 1,
       "bm": 0
     },
@@ -18325,10 +18326,11 @@
       "ty": 4,
       "nm": "BARRAINFOVISITANTE",
       "sr": 1,
+      "hd": true,
       "ks": {
         "o": {
           "a": 0,
-          "k": 100,
+          "k": 10,
           "ix": 11
         },
         "r": {
@@ -18594,9 +18596,9 @@
           "hd": false
         }
       ],
-      "ip": 168.00000684278,
+      "ip": 299.00000684278,
       "op": 300.00001221925,
-      "st": 168.00000684278,
+      "st": 299.00000684278,
       "ct": 1,
       "bm": 0
     },
@@ -18604,14 +18606,15 @@
       "ddd": 0,
       "ind": 34,
       "ty": 5,
-      "nm": ".datojugadorhomeclub",
-      "cl": "datojugadorhomeclub",
+      "hd": true,
+      "nm": ".datojugadorhomeclub_OLD",
+      "cl": "datojugadorhomeclub_OLD",
       "parent": 37,
       "sr": 1,
       "ks": {
         "o": {
           "a": 0,
-          "k": 100,
+          "k": 0,
           "ix": 11
         },
         "r": {
@@ -18658,7 +18661,7 @@
               "s": {
                 "s": 20,
                 "f": "UniformPro-Med",
-                "t": ".300",
+                "t": "",
                 "ca": 0,
                 "j": 2,
                 "tr": 0,
@@ -18688,9 +18691,9 @@
         },
         "a": []
       },
-      "ip": 168.00000684278,
+      "ip": 299.00000684278,
       "op": 300.00001221925,
-      "st": 0,
+      "st": 299,
       "ct": 1,
       "bm": 0
     },
@@ -18698,14 +18701,15 @@
       "ddd": 0,
       "ind": 35,
       "ty": 5,
-      "nm": ".PICHEOSLOCAL",
-      "cl": "PICHEOSLOCAL",
+      "hd": true,
+      "nm": ".PICHEOSLOCAL_old",
+      "cl": "PICHEOSLOCAL_old",
       "parent": 37,
       "sr": 1,
       "ks": {
         "o": {
           "a": 0,
-          "k": 100,
+          "k": 0,
           "ix": 11
         },
         "r": {
@@ -18782,9 +18786,9 @@
         },
         "a": []
       },
-      "ip": 168.00000684278,
+      "ip": 299.00000684278,
       "op": 300.00001221925,
-      "st": 0,
+      "st": 299,
       "ct": 1,
       "bm": 0
     },
@@ -18792,14 +18796,15 @@
       "ddd": 0,
       "ind": 36,
       "ty": 5,
-      "nm": ".jugadorhomeclub",
-      "cl": "jugadorhomeclub",
+      "hd": true,
+      "nm": ".jugadorhomeclub_OLD",
+      "cl": "jugadorhomeclub_OLD",
       "parent": 37,
       "sr": 1,
       "ks": {
         "o": {
           "a": 0,
-          "k": 100,
+          "k": 0,
           "ix": 11
         },
         "r": {
@@ -18876,9 +18881,9 @@
         },
         "a": []
       },
-      "ip": 168.00000684278,
+      "ip": 299.00000684278,
       "op": 300.00001221925,
-      "st": 0,
+      "st": 299,
       "ct": 1,
       "bm": 0
     },
@@ -18886,12 +18891,13 @@
       "ddd": 0,
       "ind": 37,
       "ty": 4,
+      "hd": true,
       "nm": "BARRAINFOLOCAL",
       "sr": 1,
       "ks": {
         "o": {
           "a": 0,
-          "k": 100,
+          "k": 0,
           "ix": 11
         },
         "r": {
@@ -19157,9 +19163,9 @@
           "hd": false
         }
       ],
-      "ip": 168.00000684278,
+      "ip": 299.00000684278,
       "op": 300.00001221925,
-      "st": 168.00000684278,
+      "st": 299.00000684278,
       "ct": 1,
       "bm": 0
     },
