@@ -185,7 +185,7 @@ webcg.on('data', function (data) {
                    }else if (updateJugador === "local"){
                      anim.goToAndPlay('local', true)  
                     }else {
-
+                        updateTiming = 2
                         anim.goToAndPlay('update', true)
                     }
                     
