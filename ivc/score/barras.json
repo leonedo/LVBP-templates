@@ -27,8 +27,8 @@
       "ddd": 0,
       "ind": 1,
       "ty": 5,
-      "nm": ".AVGVISITANTE",
-      "cl": "AVGVISITANTE",
+      "nm": ".datojugadorvisitante",
+      "cl": "datojugadorvisitante",
       "parent": 4,
       "sr": 1,
       "ks": {
@@ -81,7 +81,7 @@
               "s": {
                 "s": 20,
                 "f": "UniformPro-Med",
-                "t": ".300",
+                "t": "",
                 "ca": 0,
                 "j": 2,
                 "tr": 0,
@@ -128,7 +128,7 @@
       "ks": {
         "o": {
           "a": 0,
-          "k": 100,
+          "k": 0,
           "ix": 11
         },
         "r": {
@@ -175,7 +175,7 @@
               "s": {
                 "s": 20,
                 "f": "UniformPro-Med",
-                "t": "P:1",
+                "t": "",
                 "ca": 0,
                 "j": 2,
                 "tr": 0,
@@ -215,8 +215,8 @@
       "ddd": 0,
       "ind": 3,
       "ty": 5,
-      "nm": ".INFOBARRANEGRAVISITANTE",
-      "cl": "INFOBARRANEGRAVISITANTE",
+      "nm": ".jugadorvisitante",
+      "cl": "jugadorvisitante",
       "parent": 4,
       "sr": 1,
       "ks": {
@@ -269,7 +269,7 @@
               "s": {
                 "s": 20,
                 "f": "UniformPro-Med",
-                "t": "1.PEDRO PEREZ",
+                "t": "",
                 "ca": 0,
                 "j": 2,
                 "tr": 0,
@@ -694,8 +694,8 @@
       "ddd": 0,
       "ind": 5,
       "ty": 5,
-      "nm": ".AVGLOCAL",
-      "cl": "AVGLOCAL",
+      "nm": ".datojugadorhomeclub",
+      "cl": "datojugadorhomeclub",
       "parent": 8,
       "sr": 1,
       "ks": {
@@ -748,7 +748,7 @@
               "s": {
                 "s": 20,
                 "f": "UniformPro-Med",
-                "t": ".300",
+                "t": "",
                 "ca": 0,
                 "j": 2,
                 "tr": 0,
@@ -795,7 +795,7 @@
       "ks": {
         "o": {
           "a": 0,
-          "k": 100,
+          "k": 0,
           "ix": 11
         },
         "r": {
@@ -842,7 +842,7 @@
               "s": {
                 "s": 20,
                 "f": "UniformPro-Med",
-                "t": "P:1",
+                "t": "",
                 "ca": 0,
                 "j": 2,
                 "tr": 0,
@@ -882,8 +882,8 @@
       "ddd": 0,
       "ind": 7,
       "ty": 5,
-      "nm": ".INFOBARRANEGRALOCAL",
-      "cl": "INFOBARRANEGRALOCAL",
+      "nm": ".jugadorhomeclub",
+      "cl": "jugadorhomeclub",
       "parent": 8,
       "sr": 1,
       "ks": {
@@ -936,7 +936,7 @@
               "s": {
                 "s": 20,
                 "f": "UniformPro-Med",
-                "t": "PEDRO PEREZ",
+                "t": "",
                 "ca": 0,
                 "j": 2,
                 "tr": 0,
