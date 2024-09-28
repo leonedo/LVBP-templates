@@ -349,7 +349,8 @@ webcg.on('show_both', function () {
 
 webcg.on('hide_both', function () {
    console.log("this is hide!")
-    anim.playSegments([220, 270], true);
+    anim.playSegments([220, 250], true);
+    anim.playSegments([-5, -1], false);
     isOn = false;
    
 
