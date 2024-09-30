@@ -66,13 +66,13 @@ const loadAnimation = (data, container) => {
         renderer: 'svg',
         loop: false,
         autoplay: false,
-        animationData: data
+        path: data
     });
 }
 
 
 // myAnimationData and equipo comes from the HTML file
-let anim = loadAnimation(myAnimationData, animContainer)
+let anim = loadAnimation("animation.json", animContainer)
 let externalLoop;
 
 //add font-face from data.json  
@@ -213,6 +213,7 @@ config_ready = () => {
                 addFont(family, fontPath)
             }
         }
+        
     }
 }
 
@@ -220,7 +221,7 @@ config_ready = () => {
 //anim ready
 anim.addEventListener('config_ready', function (e) {
     //setting the animation framerate
-    config_ready()
+    //config_ready()
 
 });
 
