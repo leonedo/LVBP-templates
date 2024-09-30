@@ -50,44 +50,48 @@
     <script src="../lottie.js"></script>
     <script>
         let myAnimationData = null;
-        // Fetch and modify the JSON data
-        fetch(json_file)
-            .then(response => response.json())
-            .then(animationData => {
-                //Modify the asset path in the JSON data
-                animationData.assets.forEach(asset => {
-                    if (asset.pestana) {
-                    // Replace "pest" with "my_pest" while keeping the rest of the string
-                      asset.u = pestana;
-                    }
-                      if (asset.barra) {
-                      asset.u = `${equipo}/`;
-    
-    }
-                });
-                // Store the modified JSON data in the global variable
-                myAnimationData = animationData;
-                // Log the modified JSON to verify
-                console.log('Modified JSON:', myAnimationData);
-                // Load the bat_3_copy.js script now that the data is ready
-                loadScript(script_name);
-            })
-            .catch(error => {
-                console.error('Error loading JSON:', error);
-            });
 
-        // Function to load the script dynamically
-        function loadScript(src) {
-            const script = document.createElement('script');
-            script.src = src;
-            script.onload = () => {
-                console.log(`${src} loaded successfully`);
-            };
-            script.onerror = () => {
-                console.error(`Error loading script: ${src}`);
-            };
-            document.body.appendChild(script);  // Append to body or head
+function loadJSON(json_file, script_name, pestana, equipo) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', json_file, true);
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            // Parse the JSON data from the response
+            const animationData = JSON.parse(xhr.responseText);
+            // Modify the asset paths in the JSON data
+            animationData.assets.forEach(asset => {
+                if (asset.pestana) {
+                    // Replace "pest" with "my_pest" while keeping the rest of the string
+                    asset.u = pestana;
+                }
+                if (asset.barra) {
+                    asset.u = `${equipo}/`;
+                }
+            });
+            // Store the modified JSON data in the global variable
+            myAnimationData = animationData;
+            // Log the modified JSON to verify
+            console.log('Modified JSON:', myAnimationData);
+            // Load the bat_3_copy.js script now that the data is ready
+            loadScript(script_name);
+        } else if (xhr.readyState === 4) {
+            // Handle any errors that occur during the request
+            console.error('Error loading JSON:', xhr.status, xhr.statusText);
         }
+    };
+
+    // Send the request
+    xhr.send();
+}
+// Function to load the script dynamically
+function loadScript(script_name) {
+    const script = document.createElement('script');
+    script.src = script_name;
+    document.head.appendChild(script);
+}
+
+loadJSON(json_file, script_name, pestana, equipo);
     </script>
 
 
