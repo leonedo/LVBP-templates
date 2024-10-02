@@ -10160,6 +10160,7 @@
       "ty": 5,
       "nm": ".dato4",
       "cl": "dato4",
+      "color": true,
       "parent": 1,
       "tt": 1,
       "tp": 2,
@@ -10256,6 +10257,7 @@
       "ty": 5,
       "nm": ".titulo4",
       "cl": "titulo4",
+      "color": true,
       "parent": 1,
       "tt": 1,
       "tp": 2,
@@ -10352,6 +10354,7 @@
       "ty": 5,
       "nm": ".dato3",
       "cl": "dato3",
+      "color": true,
       "parent": 1,
       "tt": 1,
       "tp": 2,
@@ -10448,6 +10451,7 @@
       "ty": 5,
       "nm": ".titulo3",
       "cl": "titulo3",
+      "color": true,
       "parent": 1,
       "tt": 1,
       "tp": 2,
@@ -10544,6 +10548,7 @@
       "ty": 5,
       "nm": ".dato2",
       "cl": "dato2",
+      "color": true,
       "parent": 1,
       "tt": 1,
       "tp": 2,
@@ -10640,6 +10645,7 @@
       "ty": 5,
       "nm": ".titulo2",
       "cl": "titulo2",
+      "color": true,
       "parent": 1,
       "tt": 1,
       "tp": 2,
@@ -10736,6 +10742,7 @@
       "ty": 5,
       "nm": ".dato1",
       "cl": "dato1",
+      "color": true,
       "parent": 1,
       "tt": 1,
       "tp": 2,
@@ -10832,6 +10839,7 @@
       "ty": 5,
       "nm": ".titulo1",
       "cl": "titulo1",
+      "color": true,
       "parent": 1,
       "tt": 1,
       "tp": 2,
@@ -10928,6 +10936,7 @@
       "ty": 5,
       "nm": ".bateador",
       "cl": "bateador",
+      "color": true,
       "parent": 1,
       "tt": 1,
       "tp": 2,
@@ -10946,7 +10955,7 @@
         "p": {
           "a": 0,
           "k": [
-            -288,
+            -278,
             70.5,
             0
           ],
@@ -11519,9 +11528,9 @@
       "dr": 65.0000012219251
     },
     {
-      "tm": 65.0000030548126,
+      "tm": 65.00000,
       "cm": "stop",
-      "dr": 16.0000006516934
+      "dr": 25.000000
     }
   ],
   "props": {}

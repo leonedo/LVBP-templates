@@ -26,14 +26,14 @@ let imagesReplace = {};
 
 
 //data de equipos
-
+let equipo
 
 var data_equipos = {
     "aguilas": {
-        "color_texto": [1,1,1],
+        "color_texto": [0,0,0],
     },
     "leones": {
-        "color_texto": [1,1,1],
+        "color_texto": [0.992,0.749,0.165],
     },
     "tigres": {
         "color_texto": [1,1,1],
@@ -48,10 +48,10 @@ var data_equipos = {
         "color_texto": [1,1,1],
     },
     "bravos": {
-        "color_texto": [1,1,1],
+        "color_texto": [0,0,0],
     },
     "caribes": {
-        "color_texto": [0,0,0],
+        "color_texto": [1,1,1],
     }
 }
 
@@ -234,7 +234,7 @@ webcg.on('data', function (data) {
     var key; 
     for (key in data) {
         console.log(key + " = " + data[key]); 
-       // if (key.includes("equipo")){equipo = data[key]}
+        if (key.includes("equipo")){equipo = data[key]}
        // if (key.includes("equipo")){clear_logos(data[key])}
         //if ( key.includes("out") || key.includes("basellena") || key.includes("parte")){update_opacidad(key,data[key])}
         //if (key === "visitante" || key === "homeclub"){update_equipos(data[key],key)}
