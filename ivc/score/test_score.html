@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--  template made by heine froholdt heine.froholdt@gmail.com  -->
+    <meta charset="UTF-8" />
+    <title>Lower Third Bodymovin</title>
+
+    <style>
+
+        #bm {
+            position: fixed;                 
+                
+        }
+
+        #loop {
+            position: fixed;  
+          
+        }
+
+        body {
+            overflow: hidden;
+            margin: 0;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bm"></div>
+    <div id="loop"></div>
+
+
+
+    <!-- Scripts -->
+
+    <script>
+        // Declare a global variable to store the modified JSON
+        let json_file = "data.json"
+        let visita = "leones"
+        let local = "magallanes"
+        let script_name = "test_score.js"
+        </script>
+    
+        
+        <script src="../webcg-framework.umd.js"></script>
+        <script src="../lottie.js"></script>
+        <script>
+            let myAnimationData = null;
+            // Fetch and modify the JSON data
+            fetch(json_file)
+                .then(response => response.json())
+                .then(animationData => {
+                    //Modify the asset path in the JSON data
+                    animationData.assets.forEach(asset => {
+                        if (asset.u === "local/")  {
+                          asset.u = `${local}/`;
+                        }
+                        if (asset.u === "visita/")  {
+                          asset.u = `${visita}/`;
+                        }
+        
+                    }
+                    );
+                    // Store the modified JSON data in the global variable
+                    myAnimationData = animationData;
+                    // Log the modified JSON to verify
+                    console.log('Modified JSON:', myAnimationData);
+                    // Load the bat_3_copy.js script now that the data is ready
+                    loadScript(script_name);
+                })
+                .catch(error => {
+                    console.error('Error loading JSON:', error);
+                });
+    
+            // Function to load the script dynamically
+            function loadScript(src) {
+                const script = document.createElement('script');
+                script.src = src;
+                script.onload = () => {
+                    console.log(`${src} loaded successfully`);
+                };
+                script.onerror = () => {
+                    console.error(`Error loading script: ${src}`);
+                };
+                document.body.appendChild(script);  // Append to body or head
+            }
+        </script>
+    
+
+</body>
+
+</html>
