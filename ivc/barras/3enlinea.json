@@ -9999,6 +9999,7 @@
       "ty": 5,
       "nm": ".textobarra",
       "cl": "textobarra",
+      "color": true,
       "tt": 1,
       "tp": 1,
       "sr": 1,
