@@ -40,13 +40,13 @@ const loadAnimation = (data, container) => {
         renderer: 'svg',
         loop: false,
         autoplay: false,
-        animationData: data
+        path: data
     });
 }
 
 
 // myAnimationData and equipo comes from the HTML file
-let anim = loadAnimation(myAnimationData, animContainer)
+let anim = loadAnimation("narrador.json", animContainer)
 let externalLoop;
 
 //add font-face from data.json  
