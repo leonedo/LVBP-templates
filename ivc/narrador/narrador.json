@@ -2894,8 +2894,8 @@
       "ddd": 0,
       "ind": 3,
       "ty": 5,
-      "nm": ".NARRADOR",
-      "cl": "NARRADOR",
+      "nm": ".TituloNARRADOR",
+      "cl": "TituloNARRADOR",
       "sr": 1,
       "ks": {
         "o": {
@@ -2995,8 +2995,8 @@
       "ddd": 0,
       "ind": 4,
       "ty": 5,
-      "nm": ".NOMBRENARRADOR",
-      "cl": "NOMBRENARRADOR",
+      "nm": ".narrador",
+      "cl": "narrador",
       "sr": 1,
       "ks": {
         "o": {
@@ -3051,14 +3051,14 @@
                   39
                 ],
                 "ps": [
-                  -289,
+                  -300,
                   -13.5
                 ],
                 "s": 23,
                 "f": "UniformPro-Bld",
-                "t": "FREDDY CHERSIA",
+                "t": " ",
                 "ca": 1,
-                "j": 0,
+                "j": 1,
                 "tr": -20,
                 "lh": 63,
                 "ls": 0,
@@ -3264,8 +3264,8 @@
       "ddd": 0,
       "ind": 6,
       "ty": 5,
-      "nm": ".COMENTARISTA",
-      "cl": "COMENTARISTA",
+      "nm": ".TITULOCOMENTARISTA",
+      "cl": "TITULOCOMENTARISTA",
       "sr": 1,
       "ks": {
         "o": {
@@ -3365,8 +3365,8 @@
       "ddd": 0,
       "ind": 7,
       "ty": 5,
-      "nm": ".NOMBRECOMENTARISTA",
-      "cl": "NOMBRECOMENTARISTA",
+      "nm": ".comentarista",
+      "cl": "comentarista",
       "sr": 1,
       "ks": {
         "o": {
@@ -3421,14 +3421,14 @@
                   39
                 ],
                 "ps": [
-                  -289,
+                  -300,
                   -13.5
                 ],
                 "s": 23,
                 "f": "UniformPro-Bld",
-                "t": "CARLOS RODRÍGUEZ",
+                "t": " ",
                 "ca": 1,
-                "j": 0,
+                "j": 1,
                 "tr": -20,
                 "lh": 63,
                 "ls": 0,
@@ -3467,7 +3467,7 @@
     {
       "tm": 0,
       "cm": "play",
-      "dr": 60.0000012219251
+      "dr": 80.0000012219251
     },
     {
       "tm": 87.0000035435826,
