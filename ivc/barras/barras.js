@@ -27,6 +27,7 @@ let imagesReplace = {};
 
 //data de equipos
 let equipo
+let pestana 
 
 var data_equipos = {
     "aguilas": {
@@ -53,6 +54,13 @@ var data_equipos = {
     "caribes": {
         "color_texto": [1,1,1],
     }
+}
+
+const pestana_size = {
+    "s": [134,39],
+    "m": [250,39],
+    "l": [380,39],
+    "xl": [580,39],
 }
 
 let animContainer = document.getElementById('bm');
@@ -235,7 +243,7 @@ webcg.on('data', function (data) {
     for (key in data) {
         console.log(key + " = " + data[key]); 
         if (key.includes("equipo")){equipo = data[key]}
-       // if (key.includes("equipo")){clear_logos(data[key])}
+        if (key.includes("pestana")){pestana = data[key]}
         //if ( key.includes("out") || key.includes("basellena") || key.includes("parte")){update_opacidad(key,data[key])}
         //if (key === "visitante" || key === "homeclub"){update_equipos(data[key],key)}
     } 
@@ -304,6 +312,14 @@ webcg.on('data', function (data) {
                                     console.log(`Color: ${animElement.data.nm}`);
                                      animElement.updateDocumentData({
                                   t: data[cl] ? data[cl].text || data[cl] : '', fc: data_equipos[equipo].color_texto}, 0); // Update the text y coloreamos Negro
+                                     
+                                 }
+
+                                 if (animElement.data.hasOwnProperty('pestana')){ // esto es solo necesario si la barra activa es diferente --> && animElement.data.lineup !== current_bat){
+                                    console.log(`Pestaña: ${animElement.data.nm}`);
+                                     animElement.updateDocumentData({
+                                 sz: pestana_size[pestana]},
+                                  0); // Update the text y coloreamos Negro
                                      
                                  }
 

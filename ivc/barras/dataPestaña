@@ -1,0 +1,11 @@
+data XL: 
+"sz": [580,39],
+
+data L:
+"sz": [380,39], 20 Caracteres
+
+data M:
+"sz": [250,39],  12 caracteres
+
+data S:
+"sz": [134,39],   8 caracteres

@@ -39,8 +39,8 @@
     <!-- Scripts -->
     <script>
     // Declare a global variable to store the modified JSON
-    let json_file = "3enlinea.json"
-    let pestana = "pestanas/xl/"
+    let json_file = "barra_bateador.json"
+    let pestana_path = "pestanas/s/"
     let equipo = "aguilas"
     let script_name = "test.js"
     </script>
@@ -58,7 +58,7 @@
                 animationData.assets.forEach(asset => {
                     if (asset.pestana) {
                     // Replace "pest" with "my_pest" while keeping the rest of the string
-                      asset.u = pestana;
+                      asset.u = pestana_path;
                     }
                       if (asset.barra) {
                       asset.u = `${equipo}/`;
