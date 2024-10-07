@@ -34,20 +34,39 @@ let animContainer = document.getElementById('bm');
 let loopContainer = document.getElementById('loop');
 
 
-const loadAnimation = (data, container) => {
+const loadAnimation = (data, container, autoplay) => {
     console.log('loading ' + data)
     return lottie.loadAnimation({
         container: container,
         renderer: 'svg',
         loop: false,
-        autoplay: false,
-        animationData: myAnimationData,
-        rendererSettings: {hideOnTransparent:false}
+        autoplay: autoplay,
+        animationData: myAnimationData
     });
 }
 
-let anim = loadAnimation('animation.json', animContainer)
+let anim = loadAnimation('animation.json', animContainer, false)
 let externalLoop;
+
+const loadAnimation_intro = (data, container, autoplay) => {
+    console.log('loading ' + data)
+    return lottie.loadAnimation({
+        container: container,
+        renderer: 'svg',
+        loop: false,
+        autoplay: autoplay,
+        path: data,
+        assetsPath: "intro/"
+    });
+}
+
+let anim_intro = loadAnimation_intro("intro.json", loopContainer, true)
+anim_intro.addEventListener('complete', () => {
+    show()
+    console.log('intro completed')
+    
+})
+
 
 //add font-face from data.json  
 const addFont = (fam, path) => {
