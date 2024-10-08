@@ -67,6 +67,15 @@ anim_intro.addEventListener('complete', () => {
     
 })
 
+let intro = true
+
+anim.onEnterFrame = function (e) {
+    if (anim.currentFrame > 10 & intro) {
+        intro = false
+        anim_intro.destroy() 
+    }
+}
+
 
 //add font-face from data.json  
 const addFont = (fam, path) => {
