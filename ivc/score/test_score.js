@@ -55,14 +55,13 @@ const loadAnimation_intro = (data, container, autoplay) => {
         renderer: 'svg',
         loop: false,
         autoplay: autoplay,
-        path: data,
-        assetsPath: "intro/"
+        animationData: myintroData,
     });
 }
 
-let anim_intro = loadAnimation_intro("intro.json", loopContainer, true)
+let anim_intro = loadAnimation_intro(myintroData, loopContainer, true)
 anim_intro.addEventListener('complete', () => {
-    show()
+    //show()
     console.log('intro completed')
     
 })
