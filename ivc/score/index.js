@@ -52,6 +52,33 @@ const loadAnimation = (data, container) => {
 let anim = loadAnimation('animation.json', animContainer)
 let externalLoop;
 
+const loadAnimation_intro = (data, container, autoplay) => {
+    console.log('loading ' + data)
+    return lottie.loadAnimation({
+        container: container,
+        renderer: 'svg',
+        loop: false,
+        autoplay: autoplay,
+        path: data,
+    });
+}
+
+let anim_intro = loadAnimation_intro("intro_animation.json", loopContainer, true)
+anim_intro.addEventListener('complete', () => {
+    show()
+    console.log('intro completed')
+    
+})
+
+let intro = true
+
+anim.onEnterFrame = function (e) {
+    if (anim.currentFrame > 10 & intro) {
+        intro = false
+        anim_intro.destroy() 
+    }
+}
+
 //add font-face from data.json  
 const addFont = (fam, path) => {
     let newFont = document.createElement('style')
