@@ -74,7 +74,7 @@ const loadAnimation = (data, container) => {
 
 
 // myAnimationData and equipo comes from the HTML file
-let anim = loadAnimation("boxscore.json", animContainer)
+let anim = loadAnimation("boxscore_final.json", animContainer)
 let externalLoop;
 
 //add font-face from data.json  
