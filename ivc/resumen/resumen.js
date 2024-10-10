@@ -362,15 +362,19 @@ function update_opacidad(campo,value){
 }
 
 
-function checkandupdate(item, value){
-    if (itemExists(item)){
-        console.log(`checkandupdate: ${item} -- exist`)
-        update_opacidad(item,value)
-    } else {
-        console.log(`checkandupdate: ${item} --- waiting`)
-        setTimeout(function(){
-            checkandupdate(item, value);
+function checkandupdate(item, value, attempts = 0) {
+    const maxAttempts = 10;
+
+    if (itemExists(item)) {
+        console.log(`checkandupdate: ${item} -- exists`);
+        update_opacidad(item, value);
+    } else if (attempts < maxAttempts) {
+        console.log(`checkandupdate: ${item} --- waiting (attempt ${attempts + 1})`);
+        setTimeout(function() {
+            checkandupdate(item, value, attempts + 1);
         }, 100);
+    } else {
+        console.log(`checkandupdate: ${item} -- reached max attempts (${maxAttempts})`);
     }
 }
 
