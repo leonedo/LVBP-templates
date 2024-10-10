@@ -24,6 +24,8 @@ let updateDelay = 0;
 let nextAnimation;
 let imagesReplace = {};
 
+let update_data
+
 
 //data de equipos
 let equipo
@@ -74,7 +76,7 @@ const loadAnimation = (data, container) => {
 
 
 // myAnimationData and equipo comes from the HTML file
-let anim = loadAnimation("animation.json", animContainer)
+let anim = loadAnimation("resumen.json", animContainer)
 let externalLoop;
 
 //add font-face from data.json  
@@ -99,7 +101,7 @@ const makeAnimPromise = () => {
             anim.addEventListener('DOMLoaded', function (e) {
                 animLoaded = true;
                 resolve('Animation ready to play')
-               
+                update(update_data)
             });
         }
     })
@@ -230,6 +232,7 @@ anim.addEventListener('config_ready', function (e) {
 const animPromise = makeAnimPromise()
 
 webcg.on('data', function (data) {
+    update_data = data
     let updateTiming = 50
     console.log('data from casparcg received')
     
