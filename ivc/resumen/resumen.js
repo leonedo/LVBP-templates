@@ -66,14 +66,15 @@ const loadAnimation = (data, container) => {
         renderer: 'svg',
         loop: false,
         autoplay: false,
-        path: data
+        path: data,
+        rendererSettings: {hideOnTransparent:false}
     });
     
 }
 
 
 // myAnimationData and equipo comes from the HTML file
-let anim = loadAnimation("data.json", animContainer)
+let anim = loadAnimation("animation.json", animContainer)
 let externalLoop;
 
 //add font-face from data.json  
@@ -98,7 +99,7 @@ const makeAnimPromise = () => {
             anim.addEventListener('DOMLoaded', function (e) {
                 animLoaded = true;
                 resolve('Animation ready to play')
-                config_ready()
+               
             });
         }
     })
@@ -222,14 +223,14 @@ config_ready = () => {
 //anim ready
 anim.addEventListener('config_ready', function (e) {
     //setting the animation framerate
-    //config_ready()
+    config_ready()
 
 });
 
 const animPromise = makeAnimPromise()
 
 webcg.on('data', function (data) {
-    let updateTiming = 0
+    let updateTiming = 50
     console.log('data from casparcg received')
     
     var key; 
@@ -237,7 +238,7 @@ webcg.on('data', function (data) {
         console.log(key + " = " + data[key]); 
         if (key.includes("equipo")){equipo = data[key]}
        // if (key.includes("equipo")){clear_logos(data[key])}
-        if ( key.includes("out") || key.includes("basellena") || key.includes("parte")){update_opacidad(key,data[key])}
+        if ( key.includes("out") || key.includes("basellena") || key.includes("partealta") || key.includes("partebaja")){checkandupdate(key,data[key])}
         //if (key === "visitante" || key === "homeclub"){update_equipos(data[key],key)}
     } 
     console.log('End of my test segment')
@@ -276,6 +277,7 @@ webcg.on('data', function (data) {
                         if (animElement.data.hasOwnProperty('refId') && animElement.data.refId.includes('image')) {
                             team = data[cl] ? data[cl].text || data[cl] : '';
                             newPath = `images/${team}.png`
+                            console.log(newPath)
                             anim.assets.forEach((item, index) => {
                                 if (item.id === animElement.data.refId) {
                                     if (imagesReplace.hasOwnProperty(animElement.data.refId)) {
@@ -285,7 +287,7 @@ webcg.on('data', function (data) {
                                     }
                                 }
                             })
-
+                            console.log(searchPath)
                             for (let i = 0; i < imageElements.length; i++) {
                                 const element = imageElements[i];
                                 if (~element.getAttribute("href").search(searchPath)) {
@@ -355,18 +357,19 @@ function update_color(campo,color){
 
 function update_opacidad(campo,value){
     var fill = `.${campo}`
+   console.log(campo)
     document.querySelector(fill).style.setProperty("opacity", value);
 }
 
 
-function checkandupdate(item){
+function checkandupdate(item, value){
     if (itemExists(item)){
         console.log(`checkandupdate: ${item} -- exist`)
-        update_opacidad(item,0)
+        update_opacidad(item,value)
     } else {
         console.log(`checkandupdate: ${item} --- waiting`)
         setTimeout(function(){
-            checkandupdate(item);
+            checkandupdate(item, value);
         }, 100);
     }
 }

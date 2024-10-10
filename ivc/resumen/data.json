@@ -14,6 +14,7 @@
       "h": 67,
       "u": "images/",
       "p": "img_0.jpg",
+      "visitante": true,
       "e": 0
     },
     {
@@ -22,6 +23,7 @@
       "h": 67,
       "u": "images/",
       "p": "img_1.png",
+      "local": true,
       "e": 0
     },
     {
@@ -3579,8 +3581,8 @@
       "ddd": 0,
       "ind": 15,
       "ty": 4,
-      "nm": ".partebajaInning",
-      "cl": "partebajaInning",
+      "nm": ".partealtaInning",
+      "cl": "partealtaInning",
       "parent": 16,
       "sr": 1,
       "ks": {
