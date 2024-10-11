@@ -261,7 +261,7 @@
                   29
                 ],
                 "ps": [
-                  -70,
+                  -80,
                   -43.875
                 ],
                 "s": 38,
@@ -391,7 +391,7 @@
                   29
                 ],
                 "ps": [
-                  -70,
+                  -80,
                   -43.875
                 ],
                 "s": 38,
@@ -958,8 +958,8 @@
       "ddd": 0,
       "ind": 9,
       "ty": 4,
-      "nm": ".INNINGABAJO",
-      "cl": "INNINGABAJO",
+      "nm": ".partebajaInning",
+      "cl": "partebajaInning",
       "parent": 13,
       "sr": 1,
       "ks": {
@@ -1311,8 +1311,8 @@
       "ddd": 0,
       "ind": 10,
       "ty": 4,
-      "nm": ".INNINGARRIBA",
-      "cl": "INNINGARRIBA",
+      "nm": ".partealtaInning",
+      "cl": "partealtaInning",
       "parent": 13,
       "sr": 1,
       "ks": {
