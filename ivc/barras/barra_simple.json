@@ -10381,6 +10381,7 @@
       "ty": 5,
       "nm": ".textopestana",
       "cl": "textopestana",
+      "pestana": true,
       "tt": 1,
       "tp": 3,
       "sr": 1,
@@ -10516,10 +10517,18 @@
             {
               "s": {
                 "s": 24,
-                "f": "UniformPro-Med",
+                "sz": [
+                  380,
+                  39
+                ],
+                "ps": [
+                  -10,
+                  -17.5
+                ],
+                "f": "UniformProXcon-Med",
                 "t": "",
                 "ca": 1,
-                "j": 0,
+                "j": 2,
                 "tr": 0,
                 "lh": 63,
                 "ls": 0,
