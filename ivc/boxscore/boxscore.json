@@ -14,6 +14,7 @@
       "h": 67,
       "u": "images/",
       "p": "img_0.png",
+      "visitante": true,
       "e": 0
     },
     {
@@ -22,6 +23,7 @@
       "h": 67,
       "u": "images/",
       "p": "img_1.jpg",
+      "local":true,
       "e": 0
     },
     {

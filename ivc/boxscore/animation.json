@@ -13,7 +13,7 @@
       "w": 210,
       "h": 67,
       "u": "images/",
-      "p": "img_0.jpg",
+      "p": "bravos.png",
       "visitante": true,
       "e": 0
     },
@@ -22,8 +22,8 @@
       "w": 210,
       "h": 67,
       "u": "images/",
-      "p": "img_1.png",
-      "local":true,
+      "p": "magallanes.png",
+      "local": true,
       "e": 0
     },
     {
@@ -6053,8 +6053,8 @@
       "tm": 0,
       "cm": "play",
       "dr": 120
-    },{
-      
+    },
+    {
       "tm": 118,
       "cm": "update",
       "dr": 2
