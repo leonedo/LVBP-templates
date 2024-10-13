@@ -31,34 +31,35 @@ let equipo
 var data_equipos = {
     "aguilas": {
         "color_texto": [0,0,0],
-        "color": "#ffc900"
+        "color": "#FABE40"
     },
     "leones": {
         "color_texto": [0.992,0.749,0.165],
-        "color": "#ffc900"
+        "color": "#00246B"
     },
     "tigres": {
         "color_texto": [1,1,1],
-        "color": "#ffc900"
+        "color": "#D70062"
     },
     "magallanes": {
         "color_texto": [0.1,0.2,0.8],
-        "color": "#ffc900"
+        "color": "#FFE208"
     },
     "tiburones": {
         "color_texto": [1,1,1],
-        "color": "#ffc900"
+        "color": "#D0005B"
     },
     "cardenales": {
         "color_texto": [1,1,1],
-        "color": "#ffc900"
+        "color": "#9A1720"
     },
     "bravos": {
         "color_texto": [0,0,0],
-        "color": "#ffc900"
+        "color": "#41C3CB"
     },
     "caribes": {
         "color_texto": [1,1,1],
+        color: "#F2902B"
     }
 }
 
@@ -73,15 +74,14 @@ const loadAnimation = (data, container) => {
         renderer: 'svg',
         loop: false,
         autoplay: false,
-        path: data,
-        rendererSettings: {hideOnTransparent:false}
+        path: data
     });
     
 }
 
 
 // myAnimationData and equipo comes from the HTML file
-let anim = loadAnimation("data.json", animContainer)
+let anim = loadAnimation("animation.json", animContainer)
 let externalLoop;
 
 //add font-face from data.json  
