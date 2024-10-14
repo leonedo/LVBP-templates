@@ -243,7 +243,7 @@ webcg.on('data', function (data) {
     var key; 
     for (key in data) {
         console.log(key + " = " + data[key]); 
-        if (key.includes("equipo")){checkandupdate("c0",data[key])}
+        if (key.includes("equipo")){checkandcolor("c0",data_equipos[data[key]].color)}
     } 
     console.log('End of my test segment')
     animPromise.then(resolve => {
@@ -366,20 +366,15 @@ function update_opacidad(campo,value){
 }
 
 
-function checkandupdate(item, equipo, attempts = 0) {
-    const maxAttempts = 10;
-    let value = data_equipos[equipo].color;
-    if (itemExists(item)) {
-        console.log(`checkandupdate: ${item} -- exists`);
-        update_color(item, value);
-        console.log(`checkandupdate: ${item} -- updated with ${value}`);
-    } else if (attempts < maxAttempts) {
-        console.log(`checkandupdate: ${item} --- waiting (attempt ${attempts + 1})`);
-        setTimeout(function() {
-            checkandupdate(item, value, attempts + 1);
-        }, 100);
+function checkandcolor(item, color){
+    if (itemExists(item)){
+        console.log(`checkandcolor: ${item} -- exist`)
+        update_color(item,color);
     } else {
-        console.log(`checkandupdate: ${item} -- reached max attempts (${maxAttempts})`);
+        console.log(`checkandcolor: ${item} --- waiting`)
+        setTimeout(function(){
+            checkandcolor(item, color);
+        }, 100);
     }
 }
 
