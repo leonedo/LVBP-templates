@@ -25283,11 +25283,6 @@
       "dr": 280.0000012219251
     },
     {
-      "tm": 200,
-      "cm": "name:loop\r\nloopDelay: 100\r\nloopExternal: false",
-      "dr": 30
-    },
-    {
       "tm": 286.000011649019,
       "cm": "stop",
       "dr": 14.0000005702317
