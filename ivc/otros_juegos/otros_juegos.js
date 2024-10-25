@@ -331,7 +331,7 @@ webcg.on('data', function (data) {
 
 //what to do everytime main animation is done playing
 anim.addEventListener('complete', () => {
-
+console.log("animacion complete")
     if (loopAnimation && isOn && !loopExternal) {
         loopRepeat = setTimeout(() => {
             anim.goToAndPlay('loop', true);
@@ -415,6 +415,7 @@ function update_equipos(nombre_equipo,homevisit){
 webcg.on('play', function () {
     animPromise.then((resolve) => {
         console.log('play')
+        nextAnimation = 'stop'
         anim.goToAndPlay('play', true);
         if (loopExits && loopExternal) {
             externalLoop.goToAndPlay('play', true);
@@ -448,7 +449,7 @@ webcg.on('stop', function () {
     console.log('stop')
     clearTimeout(loopRepeat);
     loopAnimation = false;
-    //nextAnimation = 'stop'
+ //   nextAnimation = 'stop'
         if (!loopExternal) {
             anim.goToAndPlay('stop', true)
             isOn = false
