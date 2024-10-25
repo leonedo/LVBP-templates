@@ -14,7 +14,8 @@
       "h": 70,
       "u": "images/",
       "p": "img_0.png",
-      "e": 0
+      "e": 0,
+      "visitante": true
     },
     {
       "id": "image_1",
@@ -22,7 +23,8 @@
       "h": 69,
       "u": "images/",
       "p": "img_1.png",
-      "e": 0
+      "e": 0,
+      "local": true
     },
     {
       "id": "image_2",
