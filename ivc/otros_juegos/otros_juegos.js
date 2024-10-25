@@ -415,7 +415,7 @@ function update_equipos(nombre_equipo,homevisit){
 webcg.on('play', function () {
     animPromise.then((resolve) => {
         console.log('play')
-        nextAnimation = 'stop'
+       // nextAnimation = 'stop'
         anim.goToAndPlay('play', true);
         if (loopExits && loopExternal) {
             externalLoop.goToAndPlay('play', true);
