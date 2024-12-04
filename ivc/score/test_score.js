@@ -412,7 +412,7 @@ webcg.on('hide', function () {
    console.log("this is hide!")
     anim.setDirection(-1);
     anim.setSpeed(3)
-    anim.playSegments([180, 55], true);
+    anim.playSegments([180, 58], true);
     anim.playSegments([0, 0.001], false);
     isOn = false;
    
