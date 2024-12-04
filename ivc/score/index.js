@@ -65,7 +65,7 @@ const loadAnimation_intro = (data, container, autoplay) => {
 
 let anim_intro = loadAnimation_intro("intro_animation.json", loopContainer, true)
 anim_intro.addEventListener('complete', () => {
-    show()
+    start()
     console.log('intro completed')
     
 })
@@ -394,6 +394,17 @@ webcg.on('show', function () {
         console.log('show')
         anim.setSpeed(1)
         anim.goToAndPlay('show', true);
+        isOn = true;
+    });
+
+});
+
+webcg.on('start', function () {
+    anim.setDirection(1);
+    animPromise.then((resolve) => {
+        console.log('start')
+        anim.setSpeed(1)
+        anim.goToAndPlay('start', true);
         isOn = true;
     });
 
