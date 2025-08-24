@@ -9783,12 +9783,14 @@
   ],
   "fonts": {
     "list": [
-      {
+       {
         "origin": 0,
-        "fName": "UniformPro-Med",
-        "fPath": "../font/UniformPro-Bld.ttf",
-        "fFamily": "Uniform Pro",
+        "fPath": "../font/UniformProXcon-Med.ttf",
+        "fClass": "",
+        "fFamily": "UniformPro-Med",
+        "fWeight": "",
         "fStyle": "Medium",
+        "fName": "UniformPro-Med",
         "ascent": 69.9996948242188
       }
     ]

@@ -95,9 +95,10 @@ const makeAnimPromise = () => {
             resolve('Animation ready to play')
         } else {
             anim.addEventListener('DOMLoaded', function (e) {
+                config_ready()
                 animLoaded = true;
                 resolve('Animation ready to play')
-                config_ready()
+               
             });
         }
     })

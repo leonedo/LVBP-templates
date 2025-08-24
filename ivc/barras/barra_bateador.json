@@ -9777,7 +9777,7 @@
     "list": [
       {
         "origin": 0,
-        "fPath": "../font/UniformPro-Med.ttf",
+        "fPath": "../font/UniformProXcon-Med.ttf",
         "fClass": "",
         "fFamily": "UniformPro-Med",
         "fWeight": "",
@@ -9787,7 +9787,7 @@
       },
       {
         "origin": 0,
-        "fPath": "../font/UniformPro-Med.ttf",
+        "fPath": "../font/UniformProXcon-Med.ttf",
         "fClass": "",
         "fFamily": "UniformProXcon",
         "fWeight": "",
@@ -9797,7 +9797,7 @@
       },
       {
         "origin": 0,
-        "fPath": "../font/UniformPro-Lgt.ttf",
+        "fPath": "../font/UniformProXcon-Lgt.ttf",
         "fClass": "",
         "fFamily": "Uniform Pro",
         "fWeight": "",
@@ -9807,7 +9807,7 @@
       },
       {
         "origin": 0,
-        "fPath": "../font/UniformPro-Bld.ttf",
+        "fPath": "../font/UniformProXcon-Bld.ttf",
         "fClass": "",
         "fFamily": "UniformProXcon-Bld",
         "fWeight": "",
@@ -10315,7 +10315,7 @@
                 "t": "OBP",
                 "ca": 1,
                 "j": 1,
-                "tr": -100,
+                "tr": 0,
                 "lh": 63,
                 "ls": 2,
                 "fc": [
@@ -10509,7 +10509,7 @@
                 "t": "RB0",
                 "ca": 1,
                 "j": 1,
-                "tr": -100,
+                "tr": 0,
                 "lh": 63,
                 "ls": 2,
                 "fc": [
@@ -10703,7 +10703,7 @@
                 "t": "HR0",
                 "ca": 1,
                 "j": 1,
-                "tr": -100,
+                "tr": 0,
                 "lh": 63,
                 "ls": 2,
                 "fc": [
@@ -10897,7 +10897,7 @@
                 "t": "AVG",
                 "ca": 1,
                 "j": 1,
-                "tr": -100,
+                "tr": 0,
                 "lh": 63,
                 "ls": 0,
                 "fc": [
@@ -10994,7 +10994,7 @@
                 "t": "OSWALDO CABRERA",
                 "ca": 1,
                 "j": 0,
-                "tr": -10,
+                "tr": 0,
                 "lh": 63,
                 "ls": 0,
                 "fc": [
@@ -11380,7 +11380,7 @@
                 "t": "TEMPORADA 23-24",
                 "ca": 1,
                 "j": 2,
-                "tr": -40,
+                "tr": 0,
                 "lh": 63,
                 "ls": 0,
                 "fc": [

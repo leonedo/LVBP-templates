@@ -98,7 +98,7 @@ const makeAnimPromise = () => {
             anim.addEventListener('DOMLoaded', function (e) {
                 animLoaded = true;
                 resolve('Animation ready to play')
-                config_ready()
+                
             });
         }
     })
@@ -136,14 +136,16 @@ const getMarkerValue = (obj, keyItem, defaultValue) => {
 }
 
 
-
-config_ready = () => {
+//anim ready
+anim.addEventListener('config_ready', function (e) {
+    //setting the animation framerate
     let mainAnimation = anim.renderer.data
     framesMilliseconds = 1000 / mainAnimation.fr
 
     if (anim.hasOwnProperty('markers')) {
         anim.markers.forEach((item, index) => {
             markers[item.payload.name] = item;
+
         })
     }
     //checking for a loop in the animation
@@ -214,17 +216,10 @@ config_ready = () => {
                 addFont(family, fontPath)
             }
         }
-        
     }
-}
-
-
-//anim ready
-anim.addEventListener('config_ready', function (e) {
-    //setting the animation framerate
-    //config_ready()
 
 });
+
 
 const animPromise = makeAnimPromise()
 
