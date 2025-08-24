@@ -2745,7 +2745,7 @@
     "list": [
       {
         "origin": 0,
-        "fPath": "../font/UniformPro-Reg.ttf",
+        "fPath": "../font/UniformProXcon-Reg.ttf",
         "fClass": "",
         "fFamily": "UniformPro-Reg",
         "fWeight": "",
@@ -2755,7 +2755,7 @@
       },
       {
         "origin": 0,
-        "fPath": "../font/UniformPro-Lgt.ttf",
+        "fPath": "../font/UniformProXcon-Lgt.ttf",
         "fClass": "",
         "fFamily": "UniformPro-Lgt",
         "fWeight": "",
@@ -2765,7 +2765,7 @@
       },
       {
         "origin": 0,
-        "fPath": "../font/UniformPro-Bld.ttf",
+        "fPath": "../font/UniformProXcon-Bld.ttf",
         "fClass": "",
         "fFamily": "UniformPro-Bld",
         "fWeight": "",
@@ -2958,7 +2958,7 @@
                 "t": "NARRADOR",
                 "ca": 1,
                 "j": 0,
-                "tr": -20,
+                "tr": 0,
                 "lh": 63,
                 "ls": 0,
                 "fc": [
@@ -3059,7 +3059,7 @@
                 "t": " ",
                 "ca": 1,
                 "j": 1,
-                "tr": -20,
+                "tr": 0,
                 "lh": 63,
                 "ls": 0,
                 "fc": [
@@ -3328,7 +3328,7 @@
                 "t": "COMENTARISTA",
                 "ca": 1,
                 "j": 0,
-                "tr": -20,
+                "tr": 0,
                 "lh": 63,
                 "ls": 0,
                 "fc": [
@@ -3429,7 +3429,7 @@
                 "t": " ",
                 "ca": 1,
                 "j": 1,
-                "tr": -20,
+                "tr": 0,
                 "lh": 63,
                 "ls": 0,
                 "fc": [

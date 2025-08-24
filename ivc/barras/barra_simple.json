@@ -9777,7 +9777,7 @@
     "list": [
       {
         "origin": 0,
-        "fPath": "../font/UniformPro-Med.ttf",
+        "fPath": "../font/UniformProXcon-Med.ttf",
         "fClass": "",
         "fFamily": "UniformPro-Med",
         "fWeight": "",
@@ -9787,7 +9787,7 @@
       },
       {
         "origin": 0,
-        "fPath": "../font/UniformPro-Bld.ttf",
+        "fPath": "../font/UniformProXcon-Bld.ttf",
         "fClass": "",
         "fFamily": "UniformProXcon",
         "fWeight": "",

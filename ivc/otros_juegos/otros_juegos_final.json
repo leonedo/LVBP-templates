@@ -3878,7 +3878,7 @@
     "list": [
       {
         "origin": 0,
-        "fPath": "../font/UniformPro-Bld.ttf",
+        "fPath": "../font/UniformProXcon-Bld.ttf",
         "fClass": "",
         "fFamily": "UniformPro-Bld",
         "fWeight": "",
@@ -3888,7 +3888,7 @@
       },
       {
         "origin": 0,
-        "fPath": "../font/UniformPro-Thn.ttf",
+        "fPath": "../font/UniformProXcon-Thn.ttf",
         "fClass": "",
         "fFamily": "UniformPro-Thn",
         "fWeight": "",
