@@ -71,7 +71,7 @@ const makeAnimPromise = () => {
             anim.addEventListener('DOMLoaded', function (e) {
                 animLoaded = true;
                 resolve('Animation ready to play')
-                config_ready()
+                
             });
         }
     })
@@ -195,7 +195,7 @@ config_ready = () => {
 //anim ready
 anim.addEventListener('config_ready', function (e) {
     //setting the animation framerate
-    //config_ready()
+    config_ready()
 
 });
 
