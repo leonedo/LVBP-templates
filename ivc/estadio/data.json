@@ -23779,8 +23779,8 @@
             "ddd": 0,
             "ind": 1,
             "ty": 5,
-            "nm": ".estadio",
-            "cl": "estadio",
+            "nm": ".ESTADIO",
+            "cl": "ESTADIO",
             "sr": 1,
             "ks": {
                 "o": {
