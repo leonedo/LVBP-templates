@@ -9629,20 +9629,20 @@
         "origin": 0,
         "fPath": "../font/UniformProXcon-Med.ttf",
         "fClass": "",
-        "fFamily": "UniformPro-Med",
+        "fFamily": "UniformProXcon-Med",
         "fWeight": "",
         "fStyle": "Medium",
-        "fName": "UniformPro-Med",
+        "fName": "UniformProXcon-Med",
         "ascent": 69.9996948242188
       },
       {
         "origin": 0,
         "fPath": "../font/UniformProXcon-Bld.ttf",
         "fClass": "",
-        "fFamily": "UniformProXcon",
+        "fFamily": "UniformProXcon-Bld",
         "fWeight": "",
         "fStyle": "Med",
-        "fName": "UniformProXcon-Med",
+        "fName": "UniformProXcon-Bld",
         "ascent": 71.8994140625
       }
     ]

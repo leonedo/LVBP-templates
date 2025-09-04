@@ -9789,10 +9789,10 @@
         "origin": 0,
         "fPath": "../font/UniformProXcon-Bld.ttf",
         "fClass": "",
-        "fFamily": "UniformProXcon",
+        "fFamily": "UniformProXcon-Bld",
         "fWeight": "",
         "fStyle": "Med",
-        "fName": "UniformProXcon-Med",
+        "fName": "UniformProXcon-Bld",
         "ascent": 71.8994140625
       }
     ]
