@@ -9797,11 +9797,11 @@
       },
       {
         "origin": 0,
-        "fPath": "../font/UniformProXcon-Lgt.ttf",
+        "fPath": "../font/UniformProXcon-Thn.ttf",
         "fClass": "",
         "fFamily": "UniformPro-Lgt",
         "fWeight": "",
-        "fStyle": "Bold",
+        "fStyle": "Lgt",
         "fName": "UniformPro-Lgt",
         "ascent": 69.9996948242188
       },
