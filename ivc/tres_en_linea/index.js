@@ -192,13 +192,20 @@ const animPromise = makeAnimPromise()
 webcg.on('data', function (data) {
     let updateTiming = 0
     console.log('data from casparcg received')
-    var key; 
-    for (key in data) {
-        console.log(key + " = " + data[key]); 
-        //if (key.includes("equipo")){update_equipo(data[key])}
-        if ( key.includes("out") || key.includes("basellena") || key.includes("partealta") || key.includes("partebaja")){checkandupdate(key,data[key])}
-        
-    } 
+    
+    for (const key of Object.keys(data)) {
+    console.log(`${key} = ${data[key]}`); 
+    // if (key.includes("equipo")) { update_equipo(data[key]) }
+    if (
+        key.includes("out") ||
+        key.includes("basellena") ||
+        key.includes("partealta") ||
+        key.includes("partebaja")
+    ) {
+        checkandupdate(key, data[key]);
+        delete data[key]; // safely remove the key
+    }
+}
     console.log('End of my test segment')
     animPromise.then(resolve => {
             if (anim.currentFrame !== 0 && updateAnimation) {
