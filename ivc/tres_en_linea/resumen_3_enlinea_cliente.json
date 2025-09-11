@@ -1636,8 +1636,8 @@
       "ddd": 0,
       "ind": 13,
       "ty": 4,
-      "nm": ".inningabajo",
-      "cl": "inningabajo",
+      "nm": ".partebaja",
+      "cl": "partebaja",
       "parent": 16,
       "sr": 1,
       "ks": {
@@ -1675,7 +1675,7 @@
           "a": 0,
           "k": [
             162.384,
-            67.906,
+            -67.906,
             100
           ],
           "ix": 6,
@@ -2114,8 +2114,8 @@
       "ddd": 0,
       "ind": 14,
       "ty": 4,
-      "nm": ".inningarriba",
-      "cl": "inningarriba",
+      "nm": ".partealta",
+      "cl": "partealta",
       "parent": 16,
       "sr": 1,
       "ks": {

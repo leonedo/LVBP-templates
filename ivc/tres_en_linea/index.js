@@ -40,7 +40,7 @@ const loadAnimation = (data, container) => {
     });
 }
 
-let anim = loadAnimation('resumen_3_enlinea_cliente.json', animContainer)
+let anim = loadAnimation('animation.json', animContainer)
 let externalLoop;
 
 //add font-face from data.json  
@@ -192,6 +192,14 @@ const animPromise = makeAnimPromise()
 webcg.on('data', function (data) {
     let updateTiming = 0
     console.log('data from casparcg received')
+    var key; 
+    for (key in data) {
+        console.log(key + " = " + data[key]); 
+        //if (key.includes("equipo")){update_equipo(data[key])}
+        if ( key.includes("out") || key.includes("basellena") || key.includes("partealta") || key.includes("partebaja")){checkandupdate(key,data[key])}
+        
+    } 
+    console.log('End of my test segment')
     animPromise.then(resolve => {
             if (anim.currentFrame !== 0 && updateAnimation) {
                 updateTiming = framesMilliseconds * (updateDelay + loopTiming)
@@ -288,6 +296,63 @@ anim.addEventListener('complete', () => {
         nextAnimation = 'no animation'
     }
 })
+
+//Custom methods
+
+function update_color(campo,color){
+    var fill_color = `.${campo}`
+    document.querySelector(fill_color).style.setProperty("fill", color);
+}
+
+function update_opacidad(campo,value){
+    var fill = `.${campo}`
+   console.log(campo)
+    document.querySelector(fill).style.setProperty("opacity", value);
+}
+
+
+function checkandupdate(item, value, attempts = 0) {
+    const maxAttempts = 10;
+
+    if (itemExists(item)) {
+        console.log(`checkandupdate: ${item} -- exists`);
+        update_opacidad(item, value);
+    } else if (attempts < maxAttempts) {
+        console.log(`checkandupdate: ${item} --- waiting (attempt ${attempts + 1})`);
+        setTimeout(function() {
+            checkandupdate(item, value, attempts + 1);
+        }, 100);
+    } else {
+        console.log(`checkandupdate: ${item} -- reached max attempts (${maxAttempts})`);
+    }
+}
+
+function itemExists(item) {
+    var fill = `.${item}`
+   //return document.querySelector(item).style !== false;
+   return document.querySelector(fill) !== null;
+}
+
+
+function clear_logos(teamNameToSkip){
+    for (var team in equipos) {
+        if (team !== teamNameToSkip) {
+            equipos[team].forEach(function(item) { 
+                checkandupdate(item);
+            });
+        }
+    }
+}
+
+function update_equipos(nombre_equipo,homevisit){
+    // homevisit puede ser "visitante" o "homeclub"
+    var campos = opacidad_equipos[homevisit]
+    for (var j = 0; j < campos.length; j++) {
+        var campo = campos[j];
+        var combination = campo + nombre_equipo;
+        update_opacidad(combination,1);
+    }  
+}
 
 
 //casparcg control
