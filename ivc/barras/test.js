@@ -95,19 +95,27 @@ const addFont = (fam, path) => {
 }
 
 
-//checking if the animation is ready
+//checking if the animation is ready and fonts are loaded
 const makeAnimPromise = () => {
-    return new Promise(function (resolve, reject) {
-        if (animLoaded) {
-            resolve('Animation ready to play')
+    return new Promise((resolve) => {
+        // If config is already ready (animationData), call config_ready immediately
+        if (anim.renderer && anim.renderer.data && anim.renderer.data.fonts) {
+            
+            config_ready();
+            console.log('Animation ready with fonts 1' )
+            animLoaded = true;   
+            resolve('Animation ready with fonts');
         } else {
-            anim.addEventListener('DOMLoaded', function (e) {
+            // Wait for config_ready event (when using path)
+            anim.addEventListener('config_ready', function handler() {
+                config_ready();
+                console.log('Animation ready with fonts 2' )
                 animLoaded = true;
-                resolve('Animation ready to play')
-                config_ready()
+                resolve('Animation ready with fonts');
+                anim.removeEventListener('config_ready', handler);
             });
         }
-    })
+    });
 };
 
 
@@ -146,6 +154,19 @@ const getMarkerValue = (obj, keyItem, defaultValue) => {
 config_ready = () => {
     let mainAnimation = anim.renderer.data
     framesMilliseconds = 1000 / mainAnimation.fr
+
+    //Add fonts to style
+    if (!fontsLoaded) {
+        let fonts = anim.renderer.data.fonts.list;
+        for (const font in fonts) {
+            let family = fonts[font].fFamily
+            let fontPath = fonts[font].fPath
+            if (fontPath !== '') {
+                addFont(family, fontPath)
+            }
+        }
+        
+    }
 
     if (anim.hasOwnProperty('markers')) {
         anim.markers.forEach((item, index) => {
@@ -210,27 +231,10 @@ config_ready = () => {
         }
     })
 
-    //Add fonts to style
-    if (!fontsLoaded) {
-        let fonts = anim.renderer.data.fonts.list;
-        for (const font in fonts) {
-            let family = fonts[font].fFamily
-            let fontPath = fonts[font].fPath
-            if (fontPath !== '') {
-                addFont(family, fontPath)
-            }
-        }
-        
-    }
+    
 }
 
 
-//anim ready
-anim.addEventListener('config_ready', function (e) {
-    //setting the animation framerate
-    //config_ready()
-
-});
 
 const animPromise = makeAnimPromise()
 
