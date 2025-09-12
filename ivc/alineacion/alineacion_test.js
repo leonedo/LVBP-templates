@@ -88,21 +88,29 @@ const addFont = (fam, path) => {
 }
 
 
-//checking if the animation is ready
+//checking if the animation is ready and fonts are loaded
 const makeAnimPromise = () => {
-    return new Promise(function (resolve, reject) {
-        if (animLoaded) {
-            resolve('Animation ready to play')
+    return new Promise((resolve) => {
+        // If config is already ready (animationData), call config_ready immediately
+        if (anim.renderer && anim.renderer.data && anim.renderer.data.fonts) {
+            
+            config_ready();
+            console.log('Animation ready with fonts 1' )
+            animLoaded = true;   
+            resolve('Animation ready with fonts');
         } else {
-            anim.addEventListener('DOMLoaded', function (e) {
-                config_ready()
+            // Wait for config_ready event (when using path)
+            anim.addEventListener('config_ready', function handler() {
+                config_ready();
+                console.log('Animation ready with fonts 2' )
                 animLoaded = true;
-                resolve('Animation ready to play')
-               
+                resolve('Animation ready with fonts');
+                anim.removeEventListener('config_ready', handler);
             });
         }
-    })
+    });
 };
+
 
 
 const isMarker = (obj, keyItem, markerName) => {
