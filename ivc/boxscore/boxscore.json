@@ -176,8 +176,8 @@
       "ddd": 0,
       "ind": 3,
       "ty": 5,
-      "nm": ".ERRORESVISITA",
-      "cl": "ERRORESVISITA",
+      "nm": ".erroresvisita",
+      "cl": "erroresvisita",
       "sr": 1,
       "ks": {
         "o": {
@@ -306,8 +306,8 @@
       "ddd": 0,
       "ind": 4,
       "ty": 5,
-      "nm": ".ERRORESLOCAL",
-      "cl": "ERRORESLOCAL",
+      "nm": ".erroreslocal",
+      "cl": "erroreslocal",
       "sr": 1,
       "ks": {
         "o": {
@@ -436,8 +436,8 @@
       "ddd": 0,
       "ind": 5,
       "ty": 5,
-      "nm": ".HITSVISITA",
-      "cl": "HITSVISITA",
+      "nm": ".hitsvisita",
+      "cl": "hitsvisita",
       "sr": 1,
       "ks": {
         "o": {
@@ -566,8 +566,8 @@
       "ddd": 0,
       "ind": 6,
       "ty": 5,
-      "nm": ".HITSLOCAL",
-      "cl": "HITSLOCAL",
+      "nm": ".hitslocal",
+      "cl": "hitslocal",
       "sr": 1,
       "ks": {
         "o": {
@@ -696,8 +696,8 @@
       "ddd": 0,
       "ind": 7,
       "ty": 5,
-      "nm": ".CARRERASVISITA",
-      "cl": "CARRERASVISITA",
+      "nm": ".carrerasvisita",
+      "cl": "carrerasvisita",
       "parent": 11,
       "sr": 1,
       "ks": {
@@ -827,8 +827,8 @@
       "ddd": 0,
       "ind": 8,
       "ty": 5,
-      "nm": ".CARRERASLOCAL",
-      "cl": "CARRERASLOCAL",
+      "nm": ".carreraslocal",
+      "cl": "carreraslocal",
       "parent": 11,
       "sr": 1,
       "ks": {
@@ -1876,8 +1876,8 @@
       "ddd": 0,
       "ind": 12,
       "ty": 5,
-      "nm": ".NUMERODEINNING",
-      "cl": "NUMERODEINNING",
+      "nm": ".numerodeinning",
+      "cl": "numerodeinning",
       "parent": 13,
       "sr": 1,
       "ks": {

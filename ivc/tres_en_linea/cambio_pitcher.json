@@ -96,8 +96,8 @@
       "ddd": 0,
       "ind": 1,
       "ty": 4,
-      "nm": ".dosout",
-      "cl": "dosout",
+      "nm": ".out2",
+      "cl": "out2",
       "sr": 1,
       "ks": {
         "o": {
@@ -318,8 +318,8 @@
       "ddd": 0,
       "ind": 2,
       "ty": 4,
-      "nm": ".unout",
-      "cl": "unout",
+      "nm": ".out1",
+      "cl": "out1",
       "sr": 1,
       "ks": {
         "o": {
