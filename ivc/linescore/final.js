@@ -142,6 +142,19 @@ const getMarkerValue = (obj, keyItem, defaultValue) => {
 
 
 config_ready = () => {
+  
+
+    if (!fontsLoaded) {
+        let fonts = anim.renderer.data.fonts.list;
+        for (const font in fonts) {
+            let family = fonts[font].fFamily
+            let fontPath = fonts[font].fPath
+            if (fontPath !== '') {
+                addFont(family, fontPath)
+            }
+        }
+        
+    }
     let mainAnimation = anim.renderer.data
     framesMilliseconds = 1000 / mainAnimation.fr
 
@@ -209,17 +222,7 @@ config_ready = () => {
     })
 
     //Add fonts to style
-    if (!fontsLoaded) {
-        let fonts = anim.renderer.data.fonts.list;
-        for (const font in fonts) {
-            let family = fonts[font].fFamily
-            let fontPath = fonts[font].fPath
-            if (fontPath !== '') {
-                addFont(family, fontPath)
-            }
-        }
-        
-    }
+    
 }
 
 
