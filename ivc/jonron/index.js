@@ -40,7 +40,7 @@ const loadAnimation = (data, container) => {
     });
 }
 
-let anim = loadAnimation('data.json', animContainer)
+let anim = loadAnimation(data_file, animContainer)
 let externalLoop;
 
 //add font-face from data.json  
@@ -105,6 +105,19 @@ const getMarkerValue = (obj, keyItem, defaultValue) => {
 
 //anim ready
 anim.addEventListener('config_ready', function (e) {
+    
+     //Add fonts to style
+    if (!fontsLoaded) {
+        let fonts = anim.renderer.data.fonts.list;
+        for (const font in fonts) {
+            let family = fonts[font].fFamily
+            let fontPath = fonts[font].fPath
+            if (fontPath !== '') {
+                addFont(family, fontPath)
+            }
+        }
+    }
+    
     //setting the animation framerate
     let mainAnimation = anim.renderer.data
     framesMilliseconds = 1000 / mainAnimation.fr
@@ -173,17 +186,7 @@ anim.addEventListener('config_ready', function (e) {
         }
     })
 
-    //Add fonts to style
-    if (!fontsLoaded) {
-        let fonts = anim.renderer.data.fonts.list;
-        for (const font in fonts) {
-            let family = fonts[font].fFamily
-            let fontPath = fonts[font].fPath
-            if (fontPath !== '') {
-                addFont(family, fontPath)
-            }
-        }
-    }
+   
 
 });
 
