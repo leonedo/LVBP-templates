@@ -102654,12 +102654,12 @@
     "list": [
       {
         "origin": 0,
-        "fPath": "../font/UniformProXcon-Blk.ttf",
+        "fPath": "../font/UniformProXcon-Bld.ttf",
         "fClass": "",
-        "fFamily": "UniformProXcon-Blk",
+        "fFamily": "UniformProXcon-Bld",
         "fWeight": "",
         "fStyle": "Black",
-        "fName": "UniformProXcon-Blk",
+        "fName": "UniformProXcon-Bld",
         "ascent": 69.9996948242188
       }
     ]
@@ -103234,7 +103234,7 @@
                 ],
                 "s": 38,
                 "f": "UniformProXcon-Bld",
-                "t": "ESTADIO LUIS APARICIO “EL GRANDE",
+                "t": "ESTADIO",
                 "ca": 1,
                 "j": 2,
                 "tr": 0,
