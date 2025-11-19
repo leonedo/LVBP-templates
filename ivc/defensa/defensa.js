@@ -243,7 +243,7 @@ webcg.on('data', function (data) {
     var key; 
     for (key in data) {
         console.log(key + " = " + data[key]); 
-        if (key.includes("equipo")){checkandcolor("c0",data_equipos[data[key]].color)}
+       // if (key.includes("equipo")){checkandcolor("c0",data_equipos[data[key]].color)}
     } 
     console.log('End of my test segment')
     animPromise.then(resolve => {

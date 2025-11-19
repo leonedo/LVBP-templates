@@ -1,0 +1,12 @@
+{
+  "equipo": "bravos",
+  "rightfield": "RF",
+  "centerfield": "CF",
+  "leftfield": "LF",
+  "shortstop": "SS",
+  "tercerabase": "3B",
+  "segundabase": "2B",
+  "primerabase": "1B",
+  "pitcher": "P",
+  "catcher": "C"
+}
