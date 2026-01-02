@@ -77,7 +77,7 @@ const loadAnimation = (data, container) => {
 
 
 // myAnimationData and equipo comes from the HTML file
-let anim = loadAnimation("data.json", animContainer)
+let anim = loadAnimation(json_file, animContainer)
 let externalLoop;
 
 //add font-face from data.json  
