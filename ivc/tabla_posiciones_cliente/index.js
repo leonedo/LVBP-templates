@@ -40,7 +40,7 @@ const loadAnimation = (data, container) => {
     });
 }
 
-let anim = loadAnimation('data.json', animContainer)
+let anim = loadAnimation(json_file, animContainer)
 let externalLoop;
 
 //add font-face from data.json  
@@ -309,18 +309,13 @@ webcg.on('stop', function () {
     loopAnimation = false;
     nextAnimation = 'stop'
 
-    if (anim.isPaused) {
-        if (!loopExternal) {
+    
             anim.goToAndPlay('stop', true)
             isOn = false
-        }
+        
 
-        if (loopExits && loopExternal && externalLoop.isPaused) {
-            externalLoop.goToAndPlay('stop', true);
-            anim.goToAndPlay('stop', true)
-            isOn = false
-        }
-    }
+       
+    
 
 });
 
