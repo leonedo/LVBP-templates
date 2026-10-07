@@ -154,6 +154,11 @@ anim.addEventListener('config_ready', function (e) {
             let fontPath = fonts[font].fPath
             if (fontPath !== '') {
                 addFont(family, fontPath)
+                // F-31: Lottie da por cargada sin esperarla una fuente de origin 0 y mide cada
+                // letra una sola vez. Con origin 3 (fuente propia con @font-face) espera a que
+                // llegue, hasta 5 s, antes de medir; fonts.load() la pide ya, antes que las imágenes.
+                fonts[font].origin = 3
+                document.fonts.load(`1em "${family}"`)
             }
         }
     }
